@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html {
   background-color: #b3b3b3;
   padding: 15px;
@@ -20,10 +23,18 @@ body {
   margin: 0;
 }
 
-.children {
-    background: rgb(105, 105, 109);
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    border: 5px solid black;
+.parent > div {
+  background: rgb(105, 105, 109);
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border: 5px solid black;
+}
+
+.parent .children-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
 }
