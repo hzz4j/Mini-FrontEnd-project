@@ -93,6 +93,10 @@ body {
   text-align: center;
 }
 
+.plans{
+  text-align: center;
+}
+
 .plan {
   background-color: #d5ffdc;
   text-align: center;
@@ -106,7 +110,7 @@ body {
 .plan--highlighted {
   background-color: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0,0.5);
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5);
 }
 
 .plan__annotation {
@@ -114,5 +118,72 @@ body {
   background-color: white;
   padding: 8px;
   border-radius: 8px;
-  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0,0.5);
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5);
+}
+
+.plan__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan__feature {
+  margin: 8px 0px;
+}
+
+.plan__title {
+  color: #0e4f1f;
+}
+
+.plan__price {
+  color: #858585;
+}
+
+.plan--highlighted .plan__price {
+  color: #0e4f1f;
+}
+
+.plan--highlighted .plan__title {
+  color: white;
+}
+
+.button {
+  background-color: #0e4f1f;
+  color: white;
+  font-size: 16px;
+  padding: 8px;
+  border: 1.5px solid #0e4f1f;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  color: #0e4f1f;
+  background-color: white;
+  font-weight: bold;
+}
+
+/* ------------key fectures------------------ */
+#key-features{
+  background-color: #ff1b68;
+  margin-top: 32px;
+  padding:16px;
+}
+
+#key-features .section-title{
+  color: white;
+  margin: 32px;
+}
+
+.key-feature__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.key-feature{
+  display: inline-block;
+  width: 30%;
 }
