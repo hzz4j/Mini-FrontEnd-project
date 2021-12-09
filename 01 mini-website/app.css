@@ -205,3 +205,32 @@ body {
   font-weight: bold;
   text-align: center;
 }
+
+/* -------footer----------- */
+.main-footer {
+  background-color: black;
+  color: white;
+  margin-top: 48px;
+  padding: 32px;
+}
+
+.main-footer__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.main-footer__link {
+  display: inline-block;
+  margin: 0 16px;
+}
+.main-footer__link a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+  color: #ccc;
+}
