@@ -86,3 +86,33 @@ body {
   font-size: 35px;
   font-family: "Josefin Sans", sans-serif;
 }
+
+/* ---------------plan------------------- */
+.section-title {
+  color: #2ddf5c;
+  text-align: center;
+}
+
+.plan {
+  background-color: #d5ffdc;
+  text-align: center;
+  padding: 16px;
+  margin: 8px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.plan--highlighted {
+  background-color: #19b84c;
+  color: white;
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0,0.5);
+}
+
+.plan__annotation {
+  color: #19b84c;
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0,0.5);
+}
