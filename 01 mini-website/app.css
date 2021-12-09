@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&family=Meow+Script&display=swap");
+
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
 }
+
+/* -----------header---------------- */
 
 .main-header {
   background-color: #2ddf5c;
@@ -46,4 +51,18 @@ body {
   color: #0e4f1f;
   font-weight: bold;
   padding: 3px 0;
+}
+
+/* ---------------main--------------------- */
+#product-overview {
+  background: url("imgs/freedom.jpg");
+  height: 528px;
+  width: 100%;
+  padding: 10px;
+}
+
+#product-overview > h1 {
+  color: white;
+  font-size: 35px;
+  font-family: "Josefin Sans", sans-serif;
 }
