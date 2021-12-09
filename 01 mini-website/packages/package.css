@@ -3,7 +3,7 @@ main {
 }
 
 .background {
-  background: url('../imgs/plans-background.jpg');
+  background: url("../imgs/plans-background.jpg");
   width: 100%;
   height: 100%;
   position: fixed;
@@ -18,9 +18,9 @@ main {
 }
 
 .package:hover,
-.package:active{
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border-color: #ff5454 !important;
+.package:active {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-color: #ff5454 !important;
 }
 
 .package a {
@@ -45,28 +45,36 @@ main {
 
 #plus {
   background-color: rgba(213, 255, 220, 0.95);
+  position: relative;
+}
+
+.package__badge {
+  position: absolute;
+  margin: 20px;
+  top: 10px;
+  right: 10px;
 }
 
 #free {
-    background-color: rgba(234, 252, 237, 0.95);
-    float: right;
-    border-left: 4px solid #0e4f1f;
-    border-right: none;
-    text-align: right;
+  background-color: rgba(234, 252, 237, 0.95);
+  float: right;
+  border-left: 4px solid #0e4f1f;
+  border-right: none;
+  text-align: right;
 }
 
-.clearfix{
-    clear: both;
+.clearfix {
+  clear: both;
 }
 
-#premium{
-    background-color: rgba(14, 79, 31, 0.95);
+#premium {
+  background-color: rgba(14, 79, 31, 0.95);
 }
 
-#premium .package__title{
-    color: white;
+#premium .package__title {
+  color: white;
 }
 
-#premium .package__subtitle{
-    color: #bbb;
+#premium .package__subtitle {
+  color: #bbb;
 }
