@@ -11,6 +11,7 @@ body {
 /* -----------header---------------- */
 
 .main-header {
+  position:fixed;
   background-color: #2ddf5c;
   width: 100%;
   padding: 8px 16px;
