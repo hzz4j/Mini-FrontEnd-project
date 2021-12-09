@@ -93,7 +93,7 @@ body {
   text-align: center;
 }
 
-.plans{
+.plans {
   text-align: center;
 }
 
@@ -165,25 +165,43 @@ body {
 }
 
 /* ------------key fectures------------------ */
-#key-features{
+#key-features {
   background-color: #ff1b68;
   margin-top: 32px;
-  padding:16px;
+  padding: 16px;
 }
 
-#key-features .section-title{
+#key-features .section-title {
   color: white;
   margin: 32px;
 }
 
-.key-feature__list{
+.key-feature__list {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.key-feature{
+.key-feature {
   display: inline-block;
   width: 30%;
+  vertical-align: top;
+}
+
+.key-feature__image {
+  background: #ffcede;
+  width: 128px;
+  height: 128px;
+  border: 2px solid #424242;
+  border-radius: 50%;
+  /* display: inline-block; */
+  margin: 0 auto;
+}
+
+.key-feature__description {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
