@@ -53,6 +53,26 @@ body {
   padding: 3px 0;
 }
 
+.main-nav__item > a:hover,
+.main-nav__item > a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
+/* cts means core to action */
+.main-nav__item-cta a {
+  color: white;
+  background-color: #ff1b68;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.main-nav__item-cta a:hover,
+.main-nav__item-cta a:active {
+  border: none;
+  color: #ff1b68;
+  background-color: white;
+}
+
 /* ---------------main--------------------- */
 #product-overview {
   background: url("imgs/freedom.jpg");
