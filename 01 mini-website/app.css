@@ -1,4 +1,3 @@
-
 /* ---------------main--------------------- */
 #product-overview {
   background: url("imgs/freedom.jpg");
@@ -19,7 +18,7 @@
   text-align: center;
 }
 
-.plans {
+.plan__list {
   text-align: center;
 }
 
@@ -72,8 +71,6 @@
 .plan--highlighted .plan__title {
   color: white;
 }
-
-
 
 /* ------------key fectures------------------ */
 #key-features {

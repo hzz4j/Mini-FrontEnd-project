@@ -12,7 +12,7 @@ main {
 .package:hover,
 .package:active{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border-color: #ff5454;
+    border-color: #ff5454 !important;
 }
 
 .package a {
@@ -32,6 +32,7 @@ main {
   padding: 16px;
   font-size: 20px;
   background-color: white;
+  /* display: inline-block; */
 }
 
 #plus {
@@ -40,6 +41,14 @@ main {
 
 #free {
     background-color: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-left: 4px solid #0e4f1f;
+    border-right: none;
+    text-align: right;
+}
+
+.clearfix{
+    clear: both;
 }
 
 #premium{
