@@ -4,6 +4,7 @@
   background-image: url("imgs/freedom.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: left 10% bottom 20%;
   height: 528px;
   width: 100%;
   padding: 10px;
