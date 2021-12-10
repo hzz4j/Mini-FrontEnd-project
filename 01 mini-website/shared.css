@@ -56,7 +56,8 @@ body {
   margin: 0 16px;
 }
 
-.main-nav__item > a {
+.main-nav__item > a,
+.mobile-nav__item a {
   text-decoration: none;
   color: #0e4f1f;
   font-weight: bold;
@@ -64,12 +65,15 @@ body {
 }
 
 .main-nav__item > a:hover,
-.main-nav__item > a:active {
+.main-nav__item > a:active,
+.mobile-nav__item a:hover,
+.mobile-nav__item a:active {
   color: white;
   border-bottom: 5px solid white;
 }
 /* cts means core to action */
-.main-nav__item-cta a {
+.main-nav__item-cta a,
+.mobile-nav__item--cta a {
   color: white;
   background-color: #ff1b68;
   padding: 8px 16px;
@@ -77,15 +81,43 @@ body {
 }
 
 .main-nav__item-cta a:hover,
-.main-nav__item-cta a:active {
+.main-nav__item-cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
   border: none;
   color: #ff1b68;
   background-color: white;
 }
 
+/*---------mobile nav-------------*/
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 80vw;
+  height: 100vh;
+}
 
-/*---------mobile nav-------------*?
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
 
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
 
 /* -------footer----------- */
 .main-footer {
@@ -148,7 +180,7 @@ body {
 .modal {
   display: none;
   position: fixed;
-  z-index: 3;
+  z-index: 200;
   top: 20vh;
   left: 30vw;
   width: 40vw;
@@ -157,19 +189,18 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  
 }
 
-.modal__title{
+.modal__title {
   margin: 0 0 1rem 0;
   text-align: center;
 }
 
-.modal__actions{
+.modal__actions {
   text-align: center;
 }
 
-.modal__action{
+.modal__action {
   font: inherit;
   border: 1px solid #0e4f1f;
   text-decoration: none;
@@ -189,7 +220,6 @@ body {
   background: red;
   border-color: red;
 }
-
 
 .modal__action--negative:hover,
 .modal__action--negative:active {
