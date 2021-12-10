@@ -6,14 +6,16 @@ let mobileNav = document.querySelector(".mobile-nav");
 let toggleButton = document.querySelector(".toggle-button");
 let modalButtonNo = document.querySelector(".modal__actions button");
 let isShowMobileNav = false;
-buttons.forEach((node) => {
-    node.addEventListener("click", (e) => {
-        // modalElement.style.display = "block";
-        // backdropElement.style.display = "block";
-        modalElement.classList.add("open");
-        backdropElement.classList.add("open");
+if (buttons) {
+    buttons.forEach((node) => {
+        node.addEventListener("click", (e) => {
+            // modalElement.style.display = "block";
+            // backdropElement.style.display = "block";
+            modalElement.classList.add("open");
+            backdropElement.classList.add("open");
+        });
     });
-});
+}
 toggleButton.addEventListener("click", (_) => {
     // backdropElement.style.display = "block";
     // mobileNav.style.display = "block";

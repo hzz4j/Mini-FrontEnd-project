@@ -1,7 +1,7 @@
-let modalElement = document.querySelector(".modal")! as HTMLDivElement;
-let backdropElement = document.querySelector(".backdrop")! as HTMLDivElement;
+let modalElement = document.querySelector(".modal") as HTMLDivElement;
+let backdropElement = document.querySelector(".backdrop") as HTMLDivElement;
 let buttons: NodeListOf<Element> = document.querySelectorAll(".plan button");
-let mobileNav = document.querySelector(".mobile-nav")! as HTMLDivElement;
+let mobileNav = document.querySelector(".mobile-nav") as HTMLDivElement;
 let toggleButton = document.querySelector(
   ".toggle-button"
 )! as HTMLButtonElement;
@@ -11,14 +11,16 @@ let modalButtonNo = document.querySelector(
 
 let isShowMobileNav: boolean = false;
 
-buttons.forEach((node) => {
-  node.addEventListener("click", (e) => {
-    // modalElement.style.display = "block";
-    // backdropElement.style.display = "block";
-    modalElement.classList.add("open");
-    backdropElement.classList.add("open");
+if (buttons) {
+  buttons.forEach((node) => {
+    node.addEventListener("click", (e) => {
+      // modalElement.style.display = "block";
+      // backdropElement.style.display = "block";
+      modalElement.classList.add("open");
+      backdropElement.classList.add("open");
+    });
   });
-});
+}
 
 toggleButton.addEventListener("click", (_) => {
   // backdropElement.style.display = "block";
