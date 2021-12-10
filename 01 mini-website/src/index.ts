@@ -6,6 +6,8 @@ let toggleButton = document.querySelector(
   ".toggle-button"
 )! as HTMLButtonElement;
 
+let isShowMobileNav: boolean = false;
+
 buttons.forEach((node) => {
   node.addEventListener("click", (e) => {
     modalElement.style.display = "block";
@@ -14,17 +16,20 @@ buttons.forEach((node) => {
 });
 
 toggleButton.addEventListener("click", (_) => {
-  backdropElement.style.display = 'block';
+  backdropElement.style.display = "block";
   mobileNav.style.display = "block";
+  isShowMobileNav = true;
 });
 
 backdropElement.addEventListener("click", (_) => {
-  mobileNav.style.display = "none";
-  closeModal();
+  if (isShowMobileNav) {
+    mobileNav.style.display = "none";
+    isShowMobileNav = false;
+    closeModal();
+  }
 });
 
 function closeModal() {
   backdropElement.style.display = "none";
   modalElement.style.display = "none";
 }
-
