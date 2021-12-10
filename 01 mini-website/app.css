@@ -1,12 +1,18 @@
 /* ---------------main--------------------- */
 #product-overview {
-  background: url("imgs/freedom.jpg");
+  position: relative;
+  background-image: url("imgs/freedom.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 528px;
   width: 100%;
   padding: 10px;
 }
 
 #product-overview > h1 {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
   color: white;
   font-size: 35px;
   font-family: "Josefin Sans", sans-serif;
