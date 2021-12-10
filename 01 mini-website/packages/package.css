@@ -53,6 +53,10 @@ main {
   margin: 20px;
   top: 10px;
   right: 10px;
+  font-size: 22px;
+  color: white;
+  background-color: #ff5454;
+  padding: 8px;
 }
 
 #free {

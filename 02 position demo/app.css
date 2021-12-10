@@ -21,6 +21,7 @@ body {
   padding: 20px;
   border: 5px solid black;
   margin: 0;
+  overflow: hidden;
 }
 
 .parent > div {
@@ -37,4 +38,10 @@ body {
   left: 0;
   width: 100%;
   margin: 0;
+}
+
+.parent .children-2{
+  position: relative;
+  top: 110px;
+  right: 10px;
 }
