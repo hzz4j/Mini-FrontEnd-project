@@ -43,6 +43,10 @@ body {
   margin: 0.6rem 0;
 }
 
+main{
+  height: calc(100vh - 4rem - 5.4rem);
+}
+
 .main-header__brand {
   color: #0e4f1f;
   font-size: 22px;
@@ -51,6 +55,8 @@ body {
   height: 22px;
   vertical-align: middle;
 }
+
+
 
 .main-header__brand img {
   height: 100%;
