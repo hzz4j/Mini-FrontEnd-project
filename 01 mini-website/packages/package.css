@@ -21,14 +21,6 @@ main {
 }
 
 
-@media (min-width: 40rem) {
-  main {
-    font-size: 1.3rem;
-    max-width: 1200px;
-    margin: 3rem auto;
-  }
-}
-
 .package:hover,
 .package:active {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -93,4 +85,24 @@ main {
 
 #premium .package__subtitle {
   color: #bbb;
+}
+
+
+@media (min-width: 40rem) {
+  main {
+    font-size: 1.3rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .package {
+    border-left: 4px solid #0e4f1f;
+    background-color: #ff5454;
+  }
+
+  #free {
+    border-right: 4px solid #0e4f1f;
+  }
 }
