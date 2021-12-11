@@ -56,6 +56,12 @@
 }
 
 @media (min-width: 40rem) {
+  .testimonial {
+    font-size: 1.3rem;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+
   .testimonial__image-container {
     width: 65%;
     min-width: 350px;
