@@ -4,9 +4,9 @@
   background-image: url("imgs/freedom.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left 20% ;
+  background-position: left 20%;
   height: 39vh;
-  width: 100vw;
+  width: 100%;
   padding: 10px;
 }
 
@@ -25,26 +25,26 @@
   text-align: center;
 }
 
-.plan__list {
-  width: 80vw;
-  margin: auto;
-  text-align: center;
+.plans {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .plan {
+  box-sizing: border-box;
   background-color: #d5ffdc;
   text-align: center;
-  padding: 16px;
-  margin: 8px;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  /* display: inline-block; */
+  width: 100%;
 }
 
 .plan--highlighted {
   background-color: #19b84c;
   color: white;
-  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5);
+  /* box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5); */
 }
 
 .plan__annotation {
@@ -81,6 +81,33 @@
   color: white;
 }
 
+@media (min-width: 40rem) and (orientation: landscape) {
+  .plan__list {
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+  }
+
+  .plan {
+    display: inline-block;
+    width: 30%;
+    margin: 0.5rem;
+    vertical-align: top;
+  }
+
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0, 0.5);
+  }
+
+  .plan__annotation {
+    width: 100%;
+    margin: 0.5rem auto;
+    min-width: 10.3rem;
+    max-width: 15.6rem;
+  }
+}
+
 /* ------------key fectures------------------ */
 #key-features {
   background-color: #ff1b68;
@@ -100,10 +127,13 @@
   text-align: center;
 }
 
-.key-feature {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+@media (min-width: 40rem) and (orientation: landscape) {
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 20rem;
+    vertical-align: top;
+  }
 }
 
 .key-feature__image {

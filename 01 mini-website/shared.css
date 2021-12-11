@@ -57,11 +57,17 @@ body {
 }
 
 .main-nav {
-  display: inline-block;
-  text-align: right;
-  box-sizing: border-box;
-  width: calc(100% - 121px); /* 注意有逗号分隔 */
-  vertical-align: middle;
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  .main-nav {
+    display: inline-block;
+    text-align: right;
+    box-sizing: border-box;
+    width: calc(100% - 121px); /* 注意有逗号分隔 */
+    vertical-align: middle;
+  }
 }
 
 .main-nav__items {
@@ -138,6 +144,7 @@ body {
 
 /* -------footer----------- */
 .main-footer {
+  width: 100%;
   background-color: black;
   color: white;
   margin-top: 48px;
