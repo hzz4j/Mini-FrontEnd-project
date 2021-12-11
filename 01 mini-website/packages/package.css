@@ -20,6 +20,15 @@ main {
   border-left: none;
 }
 
+
+@media (min-width: 40rem) {
+  main {
+    font-size: 1.3rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+}
+
 .package:hover,
 .package:active {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
