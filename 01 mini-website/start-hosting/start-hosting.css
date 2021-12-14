@@ -30,6 +30,21 @@
     width: auto;
 }
 
+.signup-form input,
+.signup-form select{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.2rem 0.5rem;
+    font:inherit;
+}
+
+.signup-form input:focus,
+.signup-form select:focus{
+    outline: none;
+    background-color: #d8f3cf;
+    border: 1px solid #2ddf5c;
+}
+
 .signup-form button{
     display: block;
     margin-top: 1rem;
