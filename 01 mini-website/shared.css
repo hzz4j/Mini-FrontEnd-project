@@ -56,8 +56,6 @@ body {
   vertical-align: middle;
 }
 
-
-
 .main-header__brand img {
   height: 100%;
 }
@@ -130,8 +128,8 @@ body {
   height: 100%;
 }
 
-@media (min-width: 1200px){
-  .mobile-nav{
+@media (min-width: 1200px) {
+  .mobile-nav {
     width: 30vw;
   }
 }
@@ -201,6 +199,14 @@ body {
   background-color: white;
   font-weight: bold;
 }
+
+.button[disabled] {
+  border: #ccc;
+  background-color: #a1a1a1;
+  color: #ccc;
+  cursor: not-allowed;
+  font-weight: bold;
+}
 /* -------modal------------ */
 .backdrop {
   display: none;
@@ -263,6 +269,6 @@ body {
   border-color: #ff5454;
 }
 
-.open{
+.open {
   display: block;
 }
