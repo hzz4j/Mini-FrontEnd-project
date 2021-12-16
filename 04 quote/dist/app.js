@@ -36,7 +36,7 @@ function downloadQuotesFromApi() {
 }
 // 模拟异步请求
 function getQuote() {
-    const timeout = Math.random() * 2000;
+    const timeout = Math.random() * 1000;
     return new Promise((resolve) => {
         setTimeout(() => {
             // todo api请求失败，使用本地的数据
@@ -61,6 +61,12 @@ function writeNewQuote() {
         const quote = yield getQuote();
         authorEl.innerText = quote.author;
         quoteEl.innerText = quote.text;
+        if (quote.text.length > 50) {
+            quoteEl.classList.add("long-quote");
+        }
+        else {
+            quoteEl.classList.remove("long-quote");
+        }
         hiddenLoadingSpinner();
     });
 }
