@@ -192,6 +192,8 @@ class ProjectItem extends Component {
     }
     dragStartHandler(event) {
         console.log("Drag start");
+        event.dataTransfer.setData("text/plain", this.project.id);
+        event.dataTransfer.effectAllowed = "move";
     }
     dragEndHandler(event) {
         console.log("Drag End.");
@@ -213,20 +215,24 @@ class ProjectList extends Component {
         this.renderContent();
     }
     dragOverHandler(event) {
-        console.log("dragOverhandler");
-        this.element.querySelector('ul').classList.add('droppable');
+        if (event.dataTransfer && event.dataTransfer.types[0] === "text/plain") {
+            event.preventDefault();
+            console.log("dragOverhandler");
+            this.element.querySelector("ul").classList.add("droppable");
+        }
     }
     dropHandler(event) {
         console.log("drophandler");
+        console.log(event.dataTransfer.getData("text/plain"));
     }
     dragLeaveHandler(event) {
         console.log("dragLeaveHandler");
-        this.element.querySelector('ul').classList.remove('droppable');
+        this.element.querySelector("ul").classList.remove("droppable");
     }
     configure() {
-        this.element.addEventListener('dragover', this.dragOverHandler);
-        this.element.addEventListener('drop', this.dropHandler);
-        this.element.addEventListener('dragleave', this.dragLeaveHandler);
+        this.element.addEventListener("dragover", this.dragOverHandler);
+        this.element.addEventListener("drop", this.dropHandler);
+        this.element.addEventListener("dragleave", this.dragLeaveHandler);
         // add listen
         projectState.addListen((projects) => {
             const relvantProjects = projects.filter((prj) => {
