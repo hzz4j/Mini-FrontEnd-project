@@ -325,7 +325,7 @@ class ProjectList
   @AutoBind
   dragOverHandler(event: DragEvent): void {
     if (event.dataTransfer && event.dataTransfer.types[0] === "text/plain") {
-      event.preventDefault();
+       event.preventDefault();
       console.log("dragOverhandler");
       const classList = this.element.querySelector("ul")!.classList;
       if (!classList.contains("droppable")) {
