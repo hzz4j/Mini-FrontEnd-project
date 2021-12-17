@@ -180,15 +180,29 @@ class ProjectItem extends Component {
             ? "1 person"
             : `${this.project.people} persons`;
     }
-    configure() { }
+    configure() {
+        this.element.addEventListener('dragstart', this.dragStartHandler);
+        this.element.addEventListener('dragend', this.dragEndHandler);
+    }
     renderContent() {
         this.element.querySelector("h2").textContent = this.project.title;
         // use getter
-        this.element.querySelector("h3").textContent =
-            this.persons + " assigned";
+        this.element.querySelector("h3").textContent = this.persons + " assigned";
         this.element.querySelector("p").textContent = this.project.description;
     }
+    dragStartHandler(event) {
+        console.log('Drag start');
+    }
+    dragEndHandler(event) {
+        console.log("Drag End.");
+    }
 }
+__decorate([
+    AutoBind
+], ProjectItem.prototype, "dragStartHandler", null);
+__decorate([
+    AutoBind
+], ProjectItem.prototype, "dragEndHandler", null);
 // Project List class
 class ProjectList extends Component {
     constructor(type) {

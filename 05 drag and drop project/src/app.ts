@@ -1,3 +1,15 @@
+// Drag & Drop interfaces
+interface Dragable {
+  dragStartHandler(event: DragEvent): void;
+  dragEndHandler(event: DragEvent): void;
+}
+
+interface DropTarget {
+  dragOverHandler(event: DragEvent): void;
+  dropHandler(event: DragEvent): void;
+  dragLeaveHandler(event: DragEvent): void;
+}
+
 // Validatable
 interface Validatable {
   value: string | number;
@@ -240,7 +252,7 @@ class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
 }
 
 // ProjectItem class
-class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> {
+class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> implements Dragable{
   private project: Project;
 
   get persons() {
@@ -255,14 +267,28 @@ class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> {
     this.renderContent();
   }
 
-  configure(): void {}
+  configure(): void {
+      this.element.addEventListener('dragstart',this.dragStartHandler);
+      this.element.addEventListener('dragend',this.dragEndHandler);
+  }
 
   renderContent(): void {
     this.element.querySelector("h2")!.textContent = this.project.title;
     // use getter
-    this.element.querySelector("h3")!.textContent =
-      this.persons + " assigned";
+    this.element.querySelector("h3")!.textContent = this.persons + " assigned";
     this.element.querySelector("p")!.textContent = this.project.description;
+  }
+
+  @AutoBind
+  dragStartHandler(event: DragEvent): void {
+    console.log('Drag start');
+    
+  }
+
+  @AutoBind
+  dragEndHandler(event: DragEvent): void {
+      console.log("Drag End.");
+      
   }
 }
 
