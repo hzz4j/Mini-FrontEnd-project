@@ -60,6 +60,40 @@ function AutoBind(
   return newDescriptor;
 }
 
+// Project List class
+class ProjectList {
+  templateElement: HTMLTemplateElement;
+  appElement: HTMLDivElement;
+  element: HTMLElement;
+
+  constructor(private type: "active" | "finished") {
+    this.templateElement = document.getElementById(
+      "project-list"
+    )! as HTMLTemplateElement;
+
+    this.appElement = <HTMLDivElement>document.getElementById("app")!;
+    const importNode = document.importNode(this.templateElement.content, true);
+    this.element = importNode.firstElementChild as HTMLElement;
+    this.element.id = this.type + "-projects";
+
+    this.attach();
+    this.renderContainer();
+  }
+
+  private attach() {
+    this.appElement.insertAdjacentElement("beforeend", this.element);
+  }
+
+  private renderContainer() {
+    const listId = `${this.type}-projects-list`;
+    this.element.querySelector("ul")!.id = listId;
+
+    this.element.querySelector("h2")!.textContent =
+      this.type.toUpperCase() + "-PROJECTS";
+  }
+}
+
+// ProjectInput class
 class ProjectInput {
   templateElement: HTMLTemplateElement;
   appElement: HTMLDivElement;
@@ -72,11 +106,13 @@ class ProjectInput {
     this.templateElement = document.getElementById(
       "project-input"
     )! as HTMLTemplateElement;
-
     this.appElement = <HTMLDivElement>document.getElementById("app")!;
 
     // render
-    const importNode = document.importNode(this.templateElement.content, true);
+    const importNode: DocumentFragment = document.importNode(
+      this.templateElement.content,
+      true
+    );
 
     this.formElement = importNode.firstElementChild as HTMLFormElement;
     this.formElement.id = "user-input";
@@ -158,3 +194,5 @@ class ProjectInput {
 }
 
 const prjInput = new ProjectInput();
+const activePrjList = new ProjectList("active");
+const finishedPrjList = new ProjectList("finished");
