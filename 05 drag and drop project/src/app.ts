@@ -60,11 +60,48 @@ function AutoBind(
   return newDescriptor;
 }
 
+// Project Statement Management
+class ProjectState {
+  private listeners: any[] = [];
+  private projects: any[] = [];
+  private static instance: ProjectState;
+  private constructor() {}
+
+  addProject(title: string, description: string, numPeople: number) {
+    const project = {
+      id: Math.random().toString(),
+      title,
+      description,
+      people: numPeople,
+    };
+    this.projects.push(project);
+    for (const listenFn of this.listeners) {
+      listenFn(this.projects.slice());
+    }
+  }
+
+  static getInstance() {
+    if (this.instance) {
+      return this.instance;
+    }
+    this.instance = new ProjectState();
+    return this.instance;
+  }
+
+  addListen(fn: any) {
+    this.listeners.push(fn);
+  }
+}
+
+// Global Project statement
+const projectState = ProjectState.getInstance();
+
 // Project List class
 class ProjectList {
   templateElement: HTMLTemplateElement;
   appElement: HTMLDivElement;
   element: HTMLElement;
+  assignedProjects: any[];
 
   constructor(private type: "active" | "finished") {
     this.templateElement = document.getElementById(
@@ -75,7 +112,12 @@ class ProjectList {
     const importNode = document.importNode(this.templateElement.content, true);
     this.element = importNode.firstElementChild as HTMLElement;
     this.element.id = this.type + "-projects";
-
+    this.assignedProjects = [];
+    // add listen
+    projectState.addListen((projects: any[]) => {
+      this.assignedProjects = projects;
+      this.renderProjects();
+    });
     this.attach();
     this.renderContainer();
   }
@@ -90,6 +132,16 @@ class ProjectList {
 
     this.element.querySelector("h2")!.textContent =
       this.type.toUpperCase() + "-PROJECTS";
+  }
+
+  private renderProjects() {
+    const listId = `${this.type}-projects-list`;
+    const ulEl = document.getElementById(listId)! as HTMLUListElement;
+    for (const project of this.assignedProjects) {
+      const li = document.createElement("li");
+      li.textContent = project.title;
+      ulEl.appendChild(li);
+    }
   }
 }
 
@@ -183,6 +235,7 @@ class ProjectInput {
     if (Array.isArray(userInputs)) {
       const [title, description, people] = userInputs;
       console.log(title, description, people);
+      projectState.addProject(title, description, people);
       this.clearInputs();
     }
   }

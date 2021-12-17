@@ -45,6 +45,37 @@ function AutoBind(target, methodName, descriptor) {
     };
     return newDescriptor;
 }
+// Project Statement Management
+class ProjectState {
+    constructor() {
+        this.listeners = [];
+        this.projects = [];
+    }
+    addProject(title, description, numPeople) {
+        const project = {
+            id: Math.random().toString(),
+            title,
+            description,
+            people: numPeople,
+        };
+        this.projects.push(project);
+        for (const listenFn of this.listeners) {
+            listenFn(this.projects.slice());
+        }
+    }
+    static getInstance() {
+        if (this.instance) {
+            return this.instance;
+        }
+        this.instance = new ProjectState();
+        return this.instance;
+    }
+    addListen(fn) {
+        this.listeners.push(fn);
+    }
+}
+// Global Project statement
+const projectState = ProjectState.getInstance();
 // Project List class
 class ProjectList {
     constructor(type) {
@@ -54,6 +85,12 @@ class ProjectList {
         const importNode = document.importNode(this.templateElement.content, true);
         this.element = importNode.firstElementChild;
         this.element.id = this.type + "-projects";
+        this.assignedProjects = [];
+        // add listen
+        projectState.addListen((projects) => {
+            this.assignedProjects = projects;
+            this.renderProjects();
+        });
         this.attach();
         this.renderContainer();
     }
@@ -65,6 +102,15 @@ class ProjectList {
         this.element.querySelector("ul").id = listId;
         this.element.querySelector("h2").textContent =
             this.type.toUpperCase() + "-PROJECTS";
+    }
+    renderProjects() {
+        const listId = `${this.type}-projects-list`;
+        const ulEl = document.getElementById(listId);
+        for (const project of this.assignedProjects) {
+            const li = document.createElement("li");
+            li.textContent = project.title;
+            ulEl.appendChild(li);
+        }
     }
 }
 // ProjectInput class
@@ -126,6 +172,7 @@ class ProjectInput {
         if (Array.isArray(userInputs)) {
             const [title, description, people] = userInputs;
             console.log(title, description, people);
+            projectState.addProject(title, description, people);
             this.clearInputs();
         }
     }
