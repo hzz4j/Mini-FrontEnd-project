@@ -130,7 +130,7 @@ abstract class Component<T extends HTMLElement, U extends HTMLElement> {
 
   constructor(
     templateId: string,
-    appId: string,
+    hostId: string,
     isBeforeEnd: boolean,
     newElementId?: string
   ) {
@@ -138,7 +138,7 @@ abstract class Component<T extends HTMLElement, U extends HTMLElement> {
       templateId
     )! as HTMLTemplateElement;
 
-    this.hostElement = <T>document.getElementById(appId)!;
+    this.hostElement = <T>document.getElementById(hostId)!;
     const importNode = document.importNode(this.templateElement.content, true);
     this.element = importNode.firstElementChild as U;
     if (newElementId) {
@@ -157,51 +157,6 @@ abstract class Component<T extends HTMLElement, U extends HTMLElement> {
 
   abstract renderContent(): void;
   abstract configure(): void;
-}
-
-// Project List class
-class ProjectList extends Component<HTMLDivElement, HTMLElement> {
-  assignedProjects: Project[];
-  constructor(private type: "active" | "finished") {
-    super("project-list", "app", true, type + "-projects");
-
-    this.assignedProjects = [];
-    // add listen
-    projectState.addListen((projects: Project[]) => {
-      const relvantProjects = projects.filter((prj) => {
-        if (this.type === "active") {
-          return prj.status === ProjectStatus.Active;
-        }
-        return prj.status === ProjectStatus.Finished;
-      });
-
-      this.assignedProjects = relvantProjects;
-      this.renderProjects();
-    });
-
-    this.renderContent();
-  }
-
-  configure(): void {}
-
-  renderContent() {
-    const listId = `${this.type}-projects-list`;
-    this.element.querySelector("ul")!.id = listId;
-
-    this.element.querySelector("h2")!.textContent =
-      this.type.toUpperCase() + "-PROJECTS";
-  }
-
-  private renderProjects() {
-    const listId = `${this.type}-projects-list`;
-    const ulEl = document.getElementById(listId)! as HTMLUListElement;
-    ulEl.innerHTML = "";
-    for (const project of this.assignedProjects) {
-      const li = document.createElement("li");
-      li.textContent = project.title;
-      ulEl.appendChild(li);
-    }
-  }
 }
 
 // ProjectInput class
@@ -280,6 +235,70 @@ class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
       console.log(title, description, people);
       projectState.addProject(title, description, people);
       this.clearInputs();
+    }
+  }
+}
+
+// ProjectItem class
+class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> {
+  private project: Project;
+  constructor(hostId: string, project: Project) {
+    super("single-project", hostId, true, project.id);
+    this.project = project;
+    this.configure();
+    this.renderContent();
+  }
+
+  configure(): void {}
+
+  renderContent(): void {
+    this.element.querySelector("h2")!.textContent = this.project.title;
+    this.element.querySelector("h3")!.textContent =
+      this.project.people.toString()+'(people)';
+    this.element.querySelector("p")!.textContent = this.project.description;
+  }
+}
+
+// Project List class
+class ProjectList extends Component<HTMLDivElement, HTMLElement> {
+  assignedProjects: Project[];
+  constructor(private type: "active" | "finished") {
+    super("project-list", "app", true, type + "-projects");
+
+    this.assignedProjects = [];
+    // add listen
+    projectState.addListen((projects: Project[]) => {
+      const relvantProjects = projects.filter((prj) => {
+        if (this.type === "active") {
+          return prj.status === ProjectStatus.Active;
+        }
+        return prj.status === ProjectStatus.Finished;
+      });
+
+      this.assignedProjects = relvantProjects;
+      this.renderProjects();
+    });
+
+    this.renderContent();
+  }
+
+  configure(): void {}
+
+  renderContent() {
+    const listId = `${this.type}-projects-list`;
+    this.element.querySelector("ul")!.id = listId;
+
+    this.element.querySelector("h2")!.textContent =
+      this.type.toUpperCase() + "-PROJECTS";
+  }
+
+  private renderProjects() {
+    const listId = `${this.type}-projects-list`;
+    const ulEl = document.getElementById(listId)! as HTMLUListElement;
+    ulEl.innerHTML = "";
+    for (const project of this.assignedProjects) {
+      // 挂载并渲染
+      new ProjectItem(ulEl.id, project);
     }
   }
 }
