@@ -10,6 +10,12 @@ body {
   margin: 0;
 }
 
+div#app{
+    width: auto;
+    max-width: 30rem;
+    margin: auto;
+}
+
 label,
 input,
 textarea {
