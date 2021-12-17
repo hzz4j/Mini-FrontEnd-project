@@ -311,7 +311,7 @@ class ProjectList
   @AutoBind
   dragOverHandler(event: DragEvent): void {
     console.log("dragOverhandler");
-    this.element.classList.add('droppable');
+    this.element.querySelector('ul')!.classList.add('droppable');
   }
   @AutoBind
   dropHandler(event: DragEvent): void {
@@ -320,6 +320,7 @@ class ProjectList
   @AutoBind
   dragLeaveHandler(event: DragEvent): void {
     console.log("dragLeaveHandler");
+    this.element.querySelector('ul')!.classList.remove('droppable');
   }
 
   configure(): void {

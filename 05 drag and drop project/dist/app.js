@@ -214,13 +214,14 @@ class ProjectList extends Component {
     }
     dragOverHandler(event) {
         console.log("dragOverhandler");
-        this.element.classList.add('droppable');
+        this.element.querySelector('ul').classList.add('droppable');
     }
     dropHandler(event) {
         console.log("drophandler");
     }
     dragLeaveHandler(event) {
         console.log("dragLeaveHandler");
+        this.element.querySelector('ul').classList.remove('droppable');
     }
     configure() {
         this.element.addEventListener('dragover', this.dragOverHandler);
