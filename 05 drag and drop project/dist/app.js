@@ -5,15 +5,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-// autobind
-function AutoBind(target, name, descriptor) {
-    console.log(name);
+// autobind decorator
+function AutoBind(target, methodName, descriptor) {
+    console.log(methodName);
     console.log(descriptor.value);
-    const originMethod = descriptor.value;
+    const originalMethod = descriptor.value;
     const newDescriptor = {
         configurable: true,
         get() {
-            const boundFn = originMethod.bind(this);
+            const boundFn = originalMethod.bind(this);
             return boundFn;
         },
     };
@@ -39,10 +39,26 @@ class ProjectInput {
     attach() {
         this.appElement.insertAdjacentElement("afterbegin", this.formElement);
     }
+    gatherUserInputs() {
+        const title = this.titleElement.value;
+        const description = this.descriptionElement.value;
+        const people = this.peopleElement.value;
+        // valid
+        if (title.trim().length === 0 ||
+            description.trim().length === 0 ||
+            people.trim().length === 0) {
+            alert("Invalid input.Please try again!");
+            return;
+        }
+        return [title, description, +people];
+    }
     submitHandler(event) {
         event.preventDefault();
-        const title = this.titleElement.value;
-        console.log(title);
+        const userInputs = this.gatherUserInputs();
+        if (Array.isArray(userInputs)) {
+            const [title, description, people] = userInputs;
+            console.log(title, description, people);
+        }
     }
     configure() {
         // this.formElement.addEventListener("submit", this.submitHandler.bind(this));
