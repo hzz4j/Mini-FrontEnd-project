@@ -92,12 +92,18 @@ class ProjectInput {
         }
         return [enteredTitle, enteredDescription, +enterPeople];
     }
+    clearInputs() {
+        this.titleElement.value = "";
+        this.descriptionElement.value = "";
+        this.peopleElement.value = "";
+    }
     submitHandler(event) {
         event.preventDefault();
         const userInputs = this.gatherUserInputs();
         if (Array.isArray(userInputs)) {
             const [title, description, people] = userInputs;
             console.log(title, description, people);
+            this.clearInputs();
         }
     }
     configure() {

@@ -134,6 +134,12 @@ class ProjectInput {
     return [enteredTitle, enteredDescription, +enterPeople];
   }
 
+  private clearInputs() {
+    this.titleElement.value = "";
+    this.descriptionElement.value = "";
+    this.peopleElement.value = "";
+  }
+
   @AutoBind
   private submitHandler(event: Event) {
     event.preventDefault();
@@ -141,6 +147,7 @@ class ProjectInput {
     if (Array.isArray(userInputs)) {
       const [title, description, people] = userInputs;
       console.log(title, description, people);
+      this.clearInputs();
     }
   }
 
