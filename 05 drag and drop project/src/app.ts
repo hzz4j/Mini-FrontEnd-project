@@ -61,20 +61,20 @@ class ProjectInput {
   }
 
   private gatherUserInputs(): [string, string, number] | void {
-    const title = this.titleElement.value;
-    const description = this.descriptionElement.value;
-    const people = this.peopleElement.value;
+    const enteredTitle = this.titleElement.value;
+    const enteredDescription = this.descriptionElement.value;
+    const enterPeople = this.peopleElement.value;
 
     // valid
     if (
-      title.trim().length === 0 ||
-      description.trim().length === 0 ||
-      people.trim().length === 0
+      enteredTitle.trim().length === 0 ||
+      enteredDescription.trim().length === 0 ||
+      enterPeople.trim().length === 0
     ) {
       alert("Invalid input.Please try again!");
       return;
     }
-    return [title, description, +people];
+    return [enteredTitle, enteredDescription, +enterPeople];
   }
 
   @AutoBind
