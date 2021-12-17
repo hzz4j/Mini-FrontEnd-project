@@ -125,7 +125,7 @@ const projectState = ProjectState.getInstance();
 
 abstract class Component<T extends HTMLElement, U extends HTMLElement> {
   templateElement: HTMLTemplateElement;
-  appElement: T;
+  hostElement: T;
   element: U;
 
   constructor(
@@ -138,7 +138,7 @@ abstract class Component<T extends HTMLElement, U extends HTMLElement> {
       templateId
     )! as HTMLTemplateElement;
 
-    this.appElement = <T>document.getElementById(appId)!;
+    this.hostElement = <T>document.getElementById(appId)!;
     const importNode = document.importNode(this.templateElement.content, true);
     this.element = importNode.firstElementChild as U;
     if (newElementId) {
@@ -149,7 +149,7 @@ abstract class Component<T extends HTMLElement, U extends HTMLElement> {
   }
 
   private attach(beforeEnd: boolean) {
-    this.appElement.insertAdjacentElement(
+    this.hostElement.insertAdjacentElement(
       beforeEnd ? "beforeend" : "afterbegin",
       this.element
     );

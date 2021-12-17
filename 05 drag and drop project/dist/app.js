@@ -95,7 +95,7 @@ const projectState = ProjectState.getInstance();
 class Component {
     constructor(templateId, appId, isBeforeEnd, newElementId) {
         this.templateElement = document.getElementById(templateId);
-        this.appElement = document.getElementById(appId);
+        this.hostElement = document.getElementById(appId);
         const importNode = document.importNode(this.templateElement.content, true);
         this.element = importNode.firstElementChild;
         if (newElementId) {
@@ -104,7 +104,7 @@ class Component {
         this.attach(isBeforeEnd);
     }
     attach(beforeEnd) {
-        this.appElement.insertAdjacentElement(beforeEnd ? "beforeend" : "afterbegin", this.element);
+        this.hostElement.insertAdjacentElement(beforeEnd ? "beforeend" : "afterbegin", this.element);
     }
 }
 // Project List class
