@@ -136,6 +136,7 @@ class ProjectList extends Component {
     renderProjects() {
         const listId = `${this.type}-projects-list`;
         const ulEl = document.getElementById(listId);
+        ulEl.innerHTML = "";
         for (const project of this.assignedProjects) {
             const li = document.createElement("li");
             li.textContent = project.title;
