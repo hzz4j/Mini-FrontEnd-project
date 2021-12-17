@@ -181,8 +181,8 @@ class ProjectItem extends Component {
             : `${this.project.people} persons`;
     }
     configure() {
-        this.element.addEventListener('dragstart', this.dragStartHandler);
-        this.element.addEventListener('dragend', this.dragEndHandler);
+        this.element.addEventListener("dragstart", this.dragStartHandler);
+        this.element.addEventListener("dragend", this.dragEndHandler);
     }
     renderContent() {
         this.element.querySelector("h2").textContent = this.project.title;
@@ -191,7 +191,7 @@ class ProjectItem extends Component {
         this.element.querySelector("p").textContent = this.project.description;
     }
     dragStartHandler(event) {
-        console.log('Drag start');
+        console.log("Drag start");
     }
     dragEndHandler(event) {
         console.log("Drag End.");
@@ -209,6 +209,23 @@ class ProjectList extends Component {
         super("project-list", "app", true, type + "-projects");
         this.type = type;
         this.assignedProjects = [];
+        this.configure();
+        this.renderContent();
+    }
+    dragOverHandler(event) {
+        console.log("dragOverhandler");
+        this.element.classList.add('droppable');
+    }
+    dropHandler(event) {
+        console.log("drophandler");
+    }
+    dragLeaveHandler(event) {
+        console.log("dragLeaveHandler");
+    }
+    configure() {
+        this.element.addEventListener('dragover', this.dragOverHandler);
+        this.element.addEventListener('drop', this.dropHandler);
+        this.element.addEventListener('dragleave', this.dragLeaveHandler);
         // add listen
         projectState.addListen((projects) => {
             const relvantProjects = projects.filter((prj) => {
@@ -220,9 +237,7 @@ class ProjectList extends Component {
             this.assignedProjects = relvantProjects;
             this.renderProjects();
         });
-        this.renderContent();
     }
-    configure() { }
     renderContent() {
         const listId = `${this.type}-projects-list`;
         this.element.querySelector("ul").id = listId;
@@ -239,6 +254,15 @@ class ProjectList extends Component {
         }
     }
 }
+__decorate([
+    AutoBind
+], ProjectList.prototype, "dragOverHandler", null);
+__decorate([
+    AutoBind
+], ProjectList.prototype, "dropHandler", null);
+__decorate([
+    AutoBind
+], ProjectList.prototype, "dragLeaveHandler", null);
 const prjInput = new ProjectInput();
 const activePrjList = new ProjectList("active");
 const finishedPrjList = new ProjectList("finished");
