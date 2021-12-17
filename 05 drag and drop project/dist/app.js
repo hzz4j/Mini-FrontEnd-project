@@ -78,6 +78,16 @@ class ProjectState extends State {
     addProject(title, description, numPeople) {
         const project = new Project(Math.random().toString(), title, description, numPeople, ProjectStatus.Active);
         this.projects.push(project);
+        this.updateListeners();
+    }
+    moveProject(prjId, newStatus) {
+        const project = this.projects.find((prj) => prj.id === prjId);
+        if (project && project.status !== newStatus) {
+            project.status = newStatus;
+            this.updateListeners();
+        }
+    }
+    updateListeners() {
         for (const listenFn of this.listeners) {
             listenFn(this.projects.slice());
         }
@@ -218,16 +228,23 @@ class ProjectList extends Component {
         if (event.dataTransfer && event.dataTransfer.types[0] === "text/plain") {
             event.preventDefault();
             console.log("dragOverhandler");
-            this.element.querySelector("ul").classList.add("droppable");
+            const classList = this.element.querySelector("ul").classList;
+            if (!classList.contains("droppable")) {
+                classList.add("droppable");
+            }
         }
     }
     dropHandler(event) {
         console.log("drophandler");
-        console.log(event.dataTransfer.getData("text/plain"));
+        const prjId = event.dataTransfer.getData("text/plain");
+        projectState.moveProject(prjId, this.type === "active" ? ProjectStatus.Active : ProjectStatus.Finished);
     }
     dragLeaveHandler(event) {
         console.log("dragLeaveHandler");
-        this.element.querySelector("ul").classList.remove("droppable");
+        const classList = this.element.querySelector("ul").classList;
+        if (classList.contains("droppable")) {
+            classList.remove("droppable");
+        }
     }
     configure() {
         this.element.addEventListener("dragover", this.dragOverHandler);
