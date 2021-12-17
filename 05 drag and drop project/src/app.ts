@@ -60,20 +60,42 @@ function AutoBind(
   return newDescriptor;
 }
 
+// enum ProjectStatus
+enum ProjectStatus {
+  Active,
+  Finished,
+}
+
+// Project class
+class Project {
+  constructor(
+    public id: string,
+    public title: string,
+    public description: string,
+    public people: number,
+    public status: ProjectStatus
+  ) {}
+}
+
+// Listen type
+type Listen = (projects: Project[]) => void;
+
 // Project Statement Management
 class ProjectState {
-  private listeners: any[] = [];
-  private projects: any[] = [];
+  private listeners: Listen[] = [];
+  private projects: Project[] = [];
   private static instance: ProjectState;
   private constructor() {}
 
   addProject(title: string, description: string, numPeople: number) {
-    const project = {
-      id: Math.random().toString(),
+    const project = new Project(
+      Math.random().toString(),
       title,
       description,
-      people: numPeople,
-    };
+      numPeople,
+      ProjectStatus.Active
+    );
+
     this.projects.push(project);
     for (const listenFn of this.listeners) {
       listenFn(this.projects.slice());
@@ -88,7 +110,7 @@ class ProjectState {
     return this.instance;
   }
 
-  addListen(fn: any) {
+  addListen(fn: Listen) {
     this.listeners.push(fn);
   }
 }
@@ -101,7 +123,7 @@ class ProjectList {
   templateElement: HTMLTemplateElement;
   appElement: HTMLDivElement;
   element: HTMLElement;
-  assignedProjects: any[];
+  assignedProjects: Project[];
 
   constructor(private type: "active" | "finished") {
     this.templateElement = document.getElementById(
@@ -114,10 +136,18 @@ class ProjectList {
     this.element.id = this.type + "-projects";
     this.assignedProjects = [];
     // add listen
-    projectState.addListen((projects: any[]) => {
-      this.assignedProjects = projects;
+    projectState.addListen((projects: Project[]) => {
+      const relvantProjects = projects.filter(prj => {
+        if(this.type === 'active'){
+            return prj.status === ProjectStatus.Active;
+        }
+        return prj.status === ProjectStatus.Finished;
+      });
+
+      this.assignedProjects = relvantProjects;
       this.renderProjects();
     });
+
     this.attach();
     this.renderContainer();
   }

@@ -45,6 +45,22 @@ function AutoBind(target, methodName, descriptor) {
     };
     return newDescriptor;
 }
+// enum ProjectStatus
+var ProjectStatus;
+(function (ProjectStatus) {
+    ProjectStatus[ProjectStatus["Active"] = 0] = "Active";
+    ProjectStatus[ProjectStatus["Finished"] = 1] = "Finished";
+})(ProjectStatus || (ProjectStatus = {}));
+// Project class
+class Project {
+    constructor(id, title, description, people, status) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.people = people;
+        this.status = status;
+    }
+}
 // Project Statement Management
 class ProjectState {
     constructor() {
@@ -52,12 +68,7 @@ class ProjectState {
         this.projects = [];
     }
     addProject(title, description, numPeople) {
-        const project = {
-            id: Math.random().toString(),
-            title,
-            description,
-            people: numPeople,
-        };
+        const project = new Project(Math.random().toString(), title, description, numPeople, ProjectStatus.Active);
         this.projects.push(project);
         for (const listenFn of this.listeners) {
             listenFn(this.projects.slice());
@@ -88,7 +99,13 @@ class ProjectList {
         this.assignedProjects = [];
         // add listen
         projectState.addListen((projects) => {
-            this.assignedProjects = projects;
+            const relvantProjects = projects.filter(prj => {
+                if (this.type === 'active') {
+                    return prj.status === ProjectStatus.Active;
+                }
+                return prj.status === ProjectStatus.Finished;
+            });
+            this.assignedProjects = relvantProjects;
             this.renderProjects();
         });
         this.attach();
