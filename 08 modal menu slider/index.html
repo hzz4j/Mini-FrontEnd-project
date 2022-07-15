@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Menu Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+    <!-- 侧边栏 -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="https://avatars.githubusercontent.com/u/26297672" alt="">
+        </div>
+        <ul>
+            <li><a href="https://q10viking.github.io/">主页</a></li>
+            <li><a href="https://q10viking.github.io/aboutme/">简介</a></li>
+            <li><a href="https://q10viking.github.io/">博客</a></li>
+            <li><a href="#">联系我</a></li>
+        </ul>
+    </nav>
+
+    <!-- 头部 -->
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+
+        <h1>水浒传</h1>
+
+        <p>
+            中国四大名著之一,是一部以北宋末年宋江起义为主要故事背景
+        </p>
+
+        <button class="signup-btn" id="open">
+            登录
+        </button>
+    </header>
+
+    <!-- 内容 -->
+    <div class="container">
+      <h2>简介</h2>
+      <p>
+        水浒传》取材于北宋末年以宋江为首的一百零八好汉从聚义梁山泊，到受朝廷招安，再到征四寇，灭叛党，最终却遭奸人谋害的英雄故事。《水浒传》的内容构成可以分为两大部分。前七十回是一大部分，主要抨击统治阶级的腐朽残忍和歌颂起义英雄的反抗精神；七十回以后写受招安、征辽、征田虎、征王庆、征方腊，是另一大部分。前一部分写人民反官府，反映的是阶级矛盾；后一部分写忠臣反奸臣，反映的是统治阶级的内部矛盾。宋江等受招安以后，处处受到奸臣的排挤和陷害，甚至最终被害死。
+      </p>
+
+      <h2>人物</h2>
+      <ul>
+        <li>及时雨宋江</li>
+        <li>豹子头林冲</li>
+        <li>打虎英雄武松</li>
+      </ul>
+      <h3>第二十二回 阎婆大闹郓城县 朱仝义释宋公明</h3>
+      <p>
+        话说当时众做公的拿住唐牛儿，解进县里来。知县听得有杀人的事，慌忙出来升厅。众做公的把这唐牛儿簇拥在厅前。知县看时，只见一个婆子跪在左边，一个汉子跪在右边。知县问道：“甚么杀人公事？”婆子告道：“老身姓阎，有个女儿唤做婆惜，典与宋押司做外宅。昨夜晚间，我女儿和宋江一处吃酒，这个唐牛儿一径来寻闹，叫骂出门，邻里尽知。今早宋江出去走了一遭回来，把我女儿杀了。老身结扭到县前，这唐二又把宋江打夺了去。告相公做主。”知县道：“你这厮怎敢打夺了凶身？”唐牛儿告道：“小人不知前后因依。只因昨夜去寻宋江搪碗酒吃，被这阎婆叉小人出来。
+      </p>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>登录</h3>
+            </div>
+            <div class="modal-content">
+                <p>登录查看更多信息</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">姓名</label>
+                        <input 
+                            type="text"
+                            id="name" 
+                            placeholder="Enter Name" 
+                            class="form-input" />
+                    </div>
+                    <div>
+                        <label for="email">邮箱</label>
+                        <input 
+                            type="email"
+                            id="name" 
+                            placeholder="Enter Email" 
+                            class="form-input" />
+                    </div>
+                    <div>
+                        <label for="password">密码</label>
+                        <input 
+                            type="password"
+                            id="name" 
+                            placeholder="Enter Password" 
+                            class="form-input" />
+                    </div>
+                    <div>
+                        <label for="password2">确认密码</label>
+                        <input 
+                            type="password"
+                            id="name" 
+                            placeholder="Enter Password" 
+                            class="form-input" />
+                    </div>
+                    <input type="submit" value="提交">
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

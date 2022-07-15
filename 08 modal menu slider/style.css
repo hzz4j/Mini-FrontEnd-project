@@ -1,0 +1,211 @@
+:root{
+    --modal-duration: 1s;
+    --primary-color: #318a62;
+    --second-color: #10d210;
+}
+
+*{
+    box-sizing: border-box;   
+}
+
+body{
+    margin: 0;
+    transition: transform 0.3s ease; /*过度效果*/
+}
+
+body.show-nav{
+    transform: translateX(200px); /*对应nav的width*/
+}
+
+/* --------------------侧边栏处理----------------------------- */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 100;
+    background-color: var(--primary-color);
+    color: #fff;
+    /* 渐变效果先隐藏 */
+    transform: translateX(-100%);
+}
+
+/* 用一个容器包裹的好处 */
+nav .logo{
+    padding: 30px 0;
+    text-align: center;
+}
+
+nav .logo img{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}
+
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* 去除点 */
+}
+
+nav ul li{
+    padding: 20px;
+    border-bottom: 2px solid rgba(200, 200, 200, 0.5);
+}
+
+/* 添加第一条横线 */
+nav ul li:first-of-type{
+    border-top: 2px solid rgba(200, 200, 200, 0.5);
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/* --------------------header处理---------------------------------- */
+
+header{
+    position: relative;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 130%;
+    text-align: center;
+    padding: 40px 15px;
+}
+
+header h1{
+    margin: 0;
+}
+
+header p{
+    margin: 30px 0;
+}
+
+header .toggle{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+header .signup-btn{
+    padding: 12px 30px;
+    font-size: 20px;
+}
+
+
+button,
+input[type = "submit"]{
+    background-color: var(--second-color);
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* ------------------内容处理-------------------------- */
+.container{
+    margin: 0 auto;
+    padding: 15px;
+    width: 800px;
+    max-width: 100%; /*当屏幕小于800px时，就以当前大小为准，而不是800px*/
+}
+
+
+/* ----------------------遮罩处理---------------------------- */
+.modal-container{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.modal-container.show-modal{
+    display: block;
+}
+
+/* 遮罩中一般都有一个输入框 */
+.modal{
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 100%;
+    border-radius: 5px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+
+/* 动画效果 */
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* 关闭按钮去除背景色 */
+.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    background-color: transparent; /* 去除背景色*/
+}
+
+.modal-header{
+    background-color: var(--primary-color);
+    padding: 15px;
+    color: #fff;
+}
+
+
+.modal-header h3{
+    margin: 0;
+}
+
+.modal-content{
+    padding: 20px;
+}
+
+.modal-content p{
+    text-align: center;
+    margin: 0;
+}
+
+/* ----------------表单------------------------ */
+.modal-form div{
+    margin: 15px 0;
+}
+
+.modal-form label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form .form-input{
+    padding: 8px;
+    width: 100%;
+}
+
