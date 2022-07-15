@@ -11,4 +11,5 @@ Learn and Use HTML ,CSS,Javascript or Typescript knowledge to build mini project
 3. [Drag & Drop](https://q10viking.github.io/Mini-FrontEnd-project/05%20drag%20and%20drop%20project/)
 4. [Progress Bar](https://q10viking.github.io/Mini-FrontEnd-project/06%20progress/)
 5. [Custom Range Slider](https://q10viking.github.io/Mini-FrontEnd-project/07%20custom%20range%20slider/)
+6. [Modal Menu slider](https://q10viking.github.io/Mini-FrontEnd-project/08%20modal%20menu%20slider/)
 
