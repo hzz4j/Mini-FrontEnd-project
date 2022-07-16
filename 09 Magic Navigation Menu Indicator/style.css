@@ -1,0 +1,155 @@
+
+
+:root{
+    --primary-color: #222327;
+    --second-color: #318a62;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Zhi Mang Xing', cursive;
+}
+
+
+.navigation{
+    position: relative;
+    width: 400px;
+    height: 70px;
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.navigation ul{
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+.navigation ul li a .icon {
+    position: relative;
+    line-height: 70px;   /*居中与容器navigation的高度一样*/
+    font-size: 1.5em;
+    z-index: 1;
+    display: block;
+    text-align: center;
+}
+
+
+
+.navigation ul li.active a .icon {
+    transform: translateY(-32px);
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+
+
+.navigation ul li a .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,2px);
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--primary-color); 
+    font-weight: 400;
+    opacity: 0;
+}
+
+.navigation ul li.active a .text{
+    opacity: 1;
+}
+
+
+.indicator{
+    position: absolute;
+    top: -50%;
+    background-color: var(--second-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 6px solid var(--primary-color);
+    transform: translateX(0);
+    transition: 0.5s ease;
+}
+
+.indicator::before{
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    content: " ";
+    width: 20px;
+    height: 20px;
+    /* background: transparent; */
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--primary-color);
+}
+
+.indicator::after{
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    content: " ";
+    width: 20px;
+    height: 20px;
+    /* background-color: red; */
+    /* background: transparent; */
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 var(--primary-color);
+}
+
+/* Indicator Transitions */
+.navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(70px * -2));
+}
+
+/* Indicator Transitions */
+.navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * -1));
+}
+
+/* Indicator Transitions */
+.navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+/* Indicator Transitions */
+.navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+/* Indicator Transitions */
+.navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(70px * 2));
+}
