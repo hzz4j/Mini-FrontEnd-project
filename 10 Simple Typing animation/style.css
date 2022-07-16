@@ -1,0 +1,43 @@
+:root{
+    --primary-color: #222327;
+    --second-color: #318a62;
+}
+
+body{
+    margin: 0;
+    background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--second-color);
+}
+
+
+/* 用一个容器框住设置 */
+.container{
+    display: inline-block;
+}
+
+h1{   
+    border-right: 3px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typings 2s steps(12) infinite alternate
+    ,blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typings{
+    from{
+        width: 0;
+    }
+    to{
+        width: 110%;  /*容器的宽度，这样就能够自适应内容*/
+    }
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
