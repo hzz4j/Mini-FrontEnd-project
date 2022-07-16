@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&family=Meow+Script&family=Zhi+Mang+Xing&display=swap');
 
 :root{
     --primary-color: #222327;
@@ -84,6 +84,7 @@ body{
     text-align: center;
     color: var(--primary-color); 
     font-weight: 400;
+    font-size: 20px;
     opacity: 0;
 }
 
