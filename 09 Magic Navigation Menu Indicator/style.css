@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&family=Meow+Script&family=Zhi+Mang+Xing&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&family=Meow+Script&family=Zhi+Mang+Xing&display=swap'); */
+
+
+
+@font-face { 
+    font-family: 'Zhi Mang Xing'; 
+    src:url('./ZhiMangXing-Regular.ttf');
+} 
+
 
 :root{
     --primary-color: #222327;
