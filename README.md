@@ -2,7 +2,7 @@
 
 Learn and Use HTML ,CSS,Javascript or Typescript knowledge to build mini project so that improve my front-end skill.
 
-> 项目总览地址： [静默的Mini FrontEnd Project Overview](https://q10viking.github.io/minifrontendproject/项目列表.html)
+> 项目总览地址： [静默的Mini FrontEnd Project Overview](https://q10viking.github.io/minifrontendproject/01%20%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8.html)
 
 
 
