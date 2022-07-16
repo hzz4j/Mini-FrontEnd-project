@@ -30,6 +30,6 @@ let refresh = setInterval(() => {
     currentLine = linesDiv[arrayIndex]
     charIndex++;
     
-}, 300);
+}, 200);
 
 
