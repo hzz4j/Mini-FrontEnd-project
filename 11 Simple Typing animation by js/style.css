@@ -21,7 +21,7 @@ body{
     align-items: center;
     color: var(--second-color);
     font-family: 'Zhi Mang Xing', cursive;
-    background: url('./sun-night.jpg') no-repeat;
+    background-image: url('./sun-night.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
