@@ -16,6 +16,7 @@ let refresh = setInterval(() => {
     if(content.length === words[arrayIndex].length){
         allText += content;
         if(arrayIndex === words.length-1){
+            // 清空内容重新书写
             linesDiv.forEach(div => div.innerText='')
             charIndex = 0;
             arrayIndex = 0;
@@ -31,10 +32,4 @@ let refresh = setInterval(() => {
     
 }, 300);
 
-
-function createDiv(){
-    const div = document.createElement('div')
-    div.classList.add('line')
-    return div;
-}
 
