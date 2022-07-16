@@ -1,4 +1,4 @@
-const words = ['我打碎了夕阳','洒在你身上','你满是圣光','我黯然退场']
+const words = ['我打碎了夕阳','洒在你身上','你满是圣光','我黯然退场      ']
 const linesDiv = document.querySelectorAll(".line")
 
 const word = document.getElementById('word')
