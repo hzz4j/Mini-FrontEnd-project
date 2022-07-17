@@ -1,0 +1,61 @@
+:root{
+    --primary-color: #318a62;
+    --second-color: #222327;
+}
+
+body{
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center; /*居中*/
+}
+
+h3{
+    margin-bottom: 0;
+}
+
+.times,
+.fa-heart{
+    color: red;
+}
+
+.times{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+small{
+    display: block;  /*块状元素，margin-bottom才生效*/
+    margin-bottom: 30px;
+}
+
+.loveMe{
+    position:relative;
+    width: 440px;
+    height: 300px;
+    max-width: 100%;
+    margin: auto; /*居中*/
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.5);
+    background: url('./sun-night.jpg') no-repeat center/cover;
+    /**
+    background-image: url(./sun-night.jpg);
+     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    */
+}
+
+/* 爱心 从小到大，最后消失*/
+.loveMe .fa-heart{
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    animation: growing 1s linear;
+    transform: translate(-50%,-50%) scale(0); /*-50%就是设置为中心，因为爱心自身有大小*/
+}
+
+@keyframes growing{
+    to{
+        transform: translate(-50%,-50%) scale(6);
+        opacity: 0;
+    }
+}
