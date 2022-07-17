@@ -5,7 +5,7 @@ let rows = 10
 // load images
 for(i = 0;i < rows * 3;i++){
     const img = document.createElement('img')
-    img.src = generateRandomLink()
+    img.src = generateRandomLink() // 直接设置连接 : https://source.unsplash.com/random/301x302
     container.appendChild(img)
 }
 
