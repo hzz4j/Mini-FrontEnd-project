@@ -1,0 +1,23 @@
+
+body{
+    background-color: #318a62;;
+    text-align: center;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1000px
+}
+
+.container img{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    object-fit: cover; /*图片https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit*/
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3);
+}
