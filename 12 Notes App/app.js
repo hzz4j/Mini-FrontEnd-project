@@ -4,7 +4,20 @@ const LS_NOTES_KEY = 'notes';
 
 (function loadNotes(){
     const notes = JSON.parse(localStorage.getItem(LS_NOTES_KEY))
-    notes.forEach(note => addNote(note))
+    if(notes && notes.length){
+        notes.forEach(note => addNote(note))
+        console.log('first in');
+        console.log(notes.length);
+    }else{
+        // add demo
+        const demo =  `
+### Demo
+- supporr markdown synx
+        ` 
+        addNote(demo)
+        console.log('second in');
+    }
+    
 })()
 
 addBtn.addEventListener('click',()=>addNote())

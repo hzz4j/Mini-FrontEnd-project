@@ -15,4 +15,5 @@ Learn and Use HTML ,CSS,Javascript or Typescript knowledge to build mini project
 7. [Magic Navigation Menu Indicator](https://q10viking.github.io/Mini-FrontEnd-project/09%20Magic%20Navigation%20Menu%20Indicator/)
 8. [Simple Typing animation by css](https://q10viking.github.io/Mini-FrontEnd-project/10%20Simple%20Typing%20animation/)
 9. [Simple Typing animation by JS](https://q10viking.github.io/Mini-FrontEnd-project/11%20Simple%20Typing%20animation%20by%20js/)
+10. [Notes App](https://q10viking.github.io/Mini-FrontEnd-project/12%20Notes%20App/)
 
