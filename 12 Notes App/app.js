@@ -11,8 +11,25 @@ const LS_NOTES_KEY = 'notes';
     }else{
         // add demo
         const demo =  `
+### 静默
+![coding](https://avatars.githubusercontent.com/u/26297672?s=40&v=4) 
 ### Demo
-- supporr markdown synx
+- supporr markdown syntax
+- This is a demo
+
+----------
+
+### Table
+
+| Name   |                           website                            |
+| ------ | :----------------------------------------------------------: |
+| Blog   |        [Q10Viking Blog](https://q10viking.github.io)         |
+| Github | [Source Code](https://github.com/Q10Viking/Mini-FrontEnd-project/tree/main/12%20Notes%20App) |
+----------
+
+### 诗句
+
+我打碎了夕阳，目睹了世间的荒凉。愿寒冷的时光，不再侵蚀脆弱的脸庞。 我打碎了夕阳，游遍四海八荒，不知何时，你已在我心上。归来，你已是他的新娘。 我打碎了夕阳，碎片落在了我的身上，覆盖了我年少轻狂的模样，也浇灭了想去远方流浪的幻想。 我打碎了夕阳，哭得肝肠寸断，因为里面有我，曾许下的诗和远方
         ` 
         addNote(demo)
         console.log('second in');
