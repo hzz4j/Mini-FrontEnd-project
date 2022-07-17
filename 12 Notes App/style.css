@@ -1,0 +1,88 @@
+@font-face { 
+    font-family: 'Zhi Mang Xing'; 
+    src:url('./ZhiMangXing-Regular.ttf');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #222327;
+    --second-color: #318a62;
+}
+
+body{
+    font-family: 'Zhi Mang Xing', cursive;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin: 0;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-note{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-family: 'Zhi Mang Xing', cursive;
+    background-color: var(--second-color);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/* ---------------------note---------------------------------- */
+.note{
+    height: 400px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 2px 0 10px 4px rgba(255, 255, 255, 0.2);
+    margin: 30px 20px;
+}
+
+.note .tools{
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--second-color);
+    padding: 0.5rem;
+}
+
+.note .tools button{
+    background: transparent;
+    color: #fff;
+    border: none;
+    margin-left: 5px;
+}
+
+.note .main{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: bisque;
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.note textarea{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-family: inherit;
+    font-size: 1.5rem;
+    outline: none;
+    resize: none; /*disables resizing behavior for textarea elements:*/
+}
+
+
+button:active{
+    transform: scale(0.98);
+}
+
+.hidden{
+    display: none;
+}
