@@ -24,4 +24,5 @@ Learn and Use HTML ,CSS,Javascript or Typescript knowledge to build mini project
 | 14   | [Form Wave Animation](https://q10viking.github.io/Mini-FrontEnd-project/16%20Form%20Wave%20Animation/) |
 | 15   | [Drink Water](https://q10viking.github.io/Mini-FrontEnd-project/17%20Drink%20Water/) |
 | 16   | [Drawing App](https://q10viking.github.io/Mini-FrontEnd-project/18%20Drawing%20App/) |
+| 17   | [Toast Notification](https://q10viking.github.io/Mini-FrontEnd-project/19%20Toast%20Notification/) |
 
