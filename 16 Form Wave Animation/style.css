@@ -1,0 +1,112 @@
+
+:root{
+    --primary-color: #318a62;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h1{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.btn{
+    display: inline-block;
+    width: 100%;
+    background-color: lightseagreen;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.container a{
+    text-decoration: none;
+    color: lightseagreen;
+}
+
+.container .text{
+    margin-top: 30px;
+    color: #fff;
+}
+
+/* 处理 */
+.container .form-control{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+    max-width: 100%;
+}
+
+.form-control label{
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 0;
+    color: #fff;
+    pointer-events: none;
+}
+
+.form-control label span{
+    display: inline-block;
+    min-width: 5px;
+    font-size: 18px;
+    transition: 0.3s ease; /*动画*/
+}
+
+.form-control input{
+    position: relative;
+    z-index: 2;
+    padding: 15px 0;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+
+
+.form-control input:focus,
+.form-control input:valid{
+    outline: none;
+    border-bottom:  2px solid  lightseagreen
+}
+
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color: lightseagreen;
+    transform: translateY(-30px);
+} 
