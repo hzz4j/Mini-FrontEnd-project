@@ -1,0 +1,35 @@
+
+
+body{
+    background-color: darksalmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    position: absolute;
+    bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.container input{
+    width: 50px;
+    padding: 5px;
+    text-align: center;   
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.container input:focus{
+    outline: none;
+}
