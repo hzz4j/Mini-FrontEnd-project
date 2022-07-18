@@ -25,5 +25,6 @@ Learn and Use HTML ,CSS,Javascript or Typescript knowledge to build mini project
 | 15   | [Drink Water](https://q10viking.github.io/Mini-FrontEnd-project/17%20Drink%20Water/) |
 | 16   | [Drawing App](https://q10viking.github.io/Mini-FrontEnd-project/18%20Drawing%20App/) |
 | 17   | [Toast Notification](https://q10viking.github.io/Mini-FrontEnd-project/19%20Toast%20Notification/) |
-| 18   | [Auto Text Effect](https://q10viking.github.io/Mini-FrontEnd-project/20%20Auto%20Text%20Effect/)                                         |
+| 18   | [Auto Text Effect](https://q10viking.github.io/Mini-FrontEnd-project/20%20Auto%20Text%20Effect/) |
+| 19   | [FAQ Collapse](https://q10viking.github.io/Mini-FrontEnd-project/21%20FAQ%20Collapse/)                                             |
 
