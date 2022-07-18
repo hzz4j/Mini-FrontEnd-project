@@ -22,7 +22,7 @@ notifiBtn.addEventListener('click',() => {
 function showNotification(message = '',type = ''){
     const div = document.createElement('div')
     div.classList.add('toast')
-    div.classList.add(type ? type : getRandomType())
+    div.classList.add(type ? type : getRandomType()) // 添加不同的类型
 
     div.innerText = message ? message : getRandomMsg()
     toastsContainer.appendChild(div)
