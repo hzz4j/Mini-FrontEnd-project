@@ -19,5 +19,6 @@ Learn and Use HTML ,CSS,Javascript or Typescript knowledge to build mini project
 | 9    | [Simple Typing animation by JS](https://q10viking.github.io/Mini-FrontEnd-project/11%20Simple%20Typing%20animation%20by%20js/) |
 | 10   | [Notes App](https://q10viking.github.io/Mini-FrontEnd-project/12%20Notes%20App/) |
 | 11   | [Double Heart Click](https://q10viking.github.io/Mini-FrontEnd-project/13%20Double%20heart%20click/) |
-| 12   | [Random Image Feed](https://q10viking.github.io/Mini-FrontEnd-project/14%20Random%20Image%20Feed/)                                        |
+| 12   | [Random Image Feed](https://q10viking.github.io/Mini-FrontEnd-project/14%20Random%20Image%20Feed/) |
+| 13   | [Scrolling Text](https://q10viking.github.io/Mini-FrontEnd-project/15%20Scrolling%20Text/) |
 
