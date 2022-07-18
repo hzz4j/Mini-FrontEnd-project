@@ -1,7 +1,7 @@
 const textEl = document.getElementById('text')
 const speedEl = document.getElementById('speed')
 
-let message = 'Q10Viking Love Programming!xxxx'
+let message = 'Q10Viking Love Programming!'
 let speed = 300 / speedEl.value //获取值
 let idx = 1
 writeMessage()
