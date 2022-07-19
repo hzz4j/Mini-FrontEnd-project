@@ -2,7 +2,6 @@ const bgSection = document.querySelector('.bg')
 const loadingText = document.querySelector('.loading-text')
 
 let loaded = 0
-
 let flag = setInterval(blurring,30)
 
 function blurring() {
