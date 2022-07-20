@@ -1,5 +1,6 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); // 处理模板index.html
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 抽离css
 
 module.exports = {
   mode: 'development', /**指定model */
@@ -9,9 +10,9 @@ module.exports = {
   },
   devtool: 'inline-source-map', /**方便定位 */
   output: {
-    filename: '[name].js',  /*生成的文件是app.js */
+    filename: 'js/[name].js',  /*生成的文件是app.js */
     path: path.resolve(__dirname, 'dist'),
-    // publicPath: "./",
+    // publicPath: "/assets/",
     assetModuleFilename: 'images/[name][ext][query]', /** 图片输出到dist目录保持原样 */
     clean: true   /* 每次生成文件都清除dist下的旧文件 */
   },
@@ -21,7 +22,8 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          // "style-loader",
+          MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           "css-loader",
           // Compiles Sass to CSS
@@ -48,10 +50,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './src/app.html',
       inject: true,
       chunks: ['main','app'],
       filename: 'index.html'
     }),
-  ],
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: '[id].[contenthash].css'
+    })
+  ]
 };
