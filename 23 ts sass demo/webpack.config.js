@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development', /**指定model */
   entry: {
-    app: './src/app.ts'  /**js入口文件为app.js */
+    app: './src/app.ts',  /**js入口文件为app.js */
+    main: './src/main.ts'
   },
   devtool: 'inline-source-map', /**方便定位 */
   output: {
@@ -47,7 +48,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      inject: true,
+      chunks: ['main','app'],
+      filename: 'index.html'
     }),
   ],
 };
