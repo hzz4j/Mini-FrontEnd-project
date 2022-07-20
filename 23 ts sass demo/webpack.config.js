@@ -52,7 +52,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/app.html',
       inject: true,
-      chunks: ['main','app'],
+      chunks: ['main','app'],  // 需要main.js和app.js
       filename: 'index.html'
     }),
     new MiniCssExtractPlugin({
