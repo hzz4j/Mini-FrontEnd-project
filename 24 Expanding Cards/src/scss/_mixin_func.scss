@@ -1,0 +1,17 @@
+// 容器中元素居中
+@mixin containerDisplayFlex($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+// 背景图片居中
+@mixin backgroundImg($url){
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
