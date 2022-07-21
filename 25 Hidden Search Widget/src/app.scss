@@ -1,0 +1,60 @@
+
+@import './scss/common_variables.scss';
+@import './scss/mixin_func';
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.share-section{
+    font-size: 18px;
+    height: $size;
+    width: $size;
+    border: 0;
+    &:focus{
+        outline: none;
+    }
+}
+
+body{
+    @include containerDisplayFlex(column);
+    background-color: $primary-color;
+    color: $white-font-color;
+    height: 100vh;
+    .search{
+        height: $size;
+        position: relative;
+
+        .input{
+            @extend .share-section;
+            padding: 15px;
+            transition: width $second ease;
+        }
+
+        .btn{
+            @extend .share-section;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $white-font-color;
+            transition: transform $second ease;
+        }
+
+        &.active{
+            .input{
+                width: $size*4;
+            }
+
+            .btn{
+                transform: translateX($size*4);
+            }
+        }
+    }
+}
