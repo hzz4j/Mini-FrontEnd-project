@@ -8,9 +8,18 @@ let size = computeSize()
 let interval = setInterval(forward,2000)
 
 
+
+imgsContainer.addEventListener('transitionend',()=>{
+    console.log("transitionend");
+    
+})
+
 function forward(){
     idx++    
     if(idx > imgs.length - 1){
+        // first limit counter to prevent fast-change bugs
+        // 解决快速回退的问题
+       
         idx = 0
     }
     imgsContainer.style.transform = `translateX(${-size * idx}px)`
