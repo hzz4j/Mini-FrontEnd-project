@@ -2,6 +2,12 @@
 @import './scss/common_variables.scss';
 @import './scss/mixin_func';
 
+@font-face { 
+    font-family: 'Zhi Mang Xing'; 
+    src:url('./assets/ZhiMangXing-Regular.ttf');
+}
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -10,11 +16,17 @@
 
 body{
     @include containerDisplayFlex(column);
-    background-color: $primary-color;
+    // background-color: $primary-color;
+    background-image: linear-gradient(135deg,rgb(243, 238, 244),rgb(173, 71, 173,0.8));
     color: $white-font-color;
-
+    font-family: 'Zhi Mang Xing', cursive;
     h1{
-        margin-top: 20px;
+        margin-top: 10vh;
+        color: $font-color;
+        padding: 15px 30px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 5px rgb(173, 71, 173,0.8);
+        background-image: linear-gradient(0deg,rgb(243, 238, 244),rgb(173, 71, 173,0.8),rgb(243, 238, 244));
     }
     .container{
         @include containerDisplayFlex();
@@ -31,7 +43,7 @@ body{
         .pannel{
 
             margin: 10px;
-            height: 40vh;
+            height: 55vh;
             border-radius: 50px;
             position: relative;
             flex: 0.5; // 统一大小
@@ -50,24 +62,30 @@ body{
                 bottom: 20px;
                 left: 20px;
                 opacity: 0;
+                color: $font-color;
             }
 
 
             // 图片
             &.java-cls{
-                @include backgroundImg('./images/java.jpg');
+                // @include backgroundImg('./images/java.jpg');
+                @include backgroundImg('https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/531/531-bigskin-3.jpg');
             }
             &.js-cls{
-                @include backgroundImg('./images/javascript.jpg');
+                // @include backgroundImg('./images/javascript.jpg');
+                @include backgroundImg('https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/155/155-bigskin-3.jpg');
             }
             &.css-cls{
-                @include backgroundImg('./images/css3.jpg');
+                // @include backgroundImg('./images/css3.jpg');
+                @include backgroundImg('https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/508/508-bigskin-3.jpg');
             }
             &.go-cls{
-                @include backgroundImg('./images/golang.jpg');
+                // @include backgroundImg('./images/golang.jpg');
+                @include backgroundImg('https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/199/199-bigskin-6.jpg');
             }
             &.py-cls{
-                @include backgroundImg('./images/python.jpg');
+                // @include backgroundImg('./images/python.jpg');
+                @include backgroundImg('https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/191/191-bigskin-7.jpg');
             }
         }
 
