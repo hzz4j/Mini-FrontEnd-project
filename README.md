@@ -29,4 +29,5 @@ Learn and Use HTML ,CSS,Javascript or Typescript knowledge to build mini project
 | 19   | [FAQ Collapse](https://q10viking.github.io/Mini-FrontEnd-project/21%20FAQ%20Collapse/) |
 | 20   | [Blurry Loading](https://q10viking.github.io/Mini-FrontEnd-project/22%20Blurry%20Loading/) |
 | 21   | [Expanding Cards](https://q10viking.github.io/Mini-FrontEnd-project/24%20Expanding%20Cards/dist/) |
+| 22   | [Hidden Search Widget](https://q10viking.github.io/Mini-FrontEnd-project/25%20Hidden%20Search%20Widget/dist/)                                     |
 
