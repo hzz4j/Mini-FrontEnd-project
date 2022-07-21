@@ -1,5 +1,3 @@
 
 const text = document.getElementById("text")
-text.innerText = 'Webpack Build Typescript Sass demo'
-
-console.log("xxx11")
+text.innerText = 'Webpack5 Build Html Sass TypesSript'
