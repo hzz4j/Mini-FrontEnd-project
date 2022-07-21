@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development', /**指定model */
   entry: {
     app: './src/app.ts',  /**js入口文件为app.js */
-    main: './src/js/main.ts'
+    main: './src/ts/main.ts'
   },
   devtool: 'inline-source-map', /**方便定位 */
   output: {
