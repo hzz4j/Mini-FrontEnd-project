@@ -30,7 +30,7 @@ body{
     }
     .container{
         @include containerDisplayFlex();
-        width: 60vw;
+        width: 80vw;
 
         @media(max-width: 580px){
             width: 90vw;
