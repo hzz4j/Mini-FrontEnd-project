@@ -1,4 +1,10 @@
 
+@font-face { 
+    font-family: 'Zhi Mang Xing'; 
+    src:url('./assets/ZhiMangXing-Regular.ttf');
+}
+
+
 $primary-color: antiquewhite;
 $second-color: rgb(41, 186, 226);
 
@@ -43,7 +49,7 @@ body{
         padding: 20px;
         border-radius: 10px;
         cursor: pointer;
-        
+        font-family: 'Zhi Mang Xing', cursive;
         a{
             color: black;
             text-decoration: none;
