@@ -1,0 +1,87 @@
+@import './scss/common_variables.scss';
+@import './scss/mixin_func';
+
+@font-face { 
+    font-family: 'Zhi Mang Xing'; 
+    src:url('./assets/ZhiMangXing-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    @include containerDisplayFlex();
+    height: 100vh;
+    // 容器A
+    .carousel{
+        position: relative;
+        width: $size;
+        height: $size/2;
+        overflow: hidden;
+        border: 1px solid black;
+        // 容器B
+        .image-container{
+            display: flex;
+            // height: 100%;
+            // js中改变size
+            transform: translateX(-$size);
+            // transition: transform 0.8s ease-in-out;
+
+            img{
+                width: $size;
+                height: $size/2;
+                object-fit: cover; // 图片调整
+            }
+        }
+
+
+        // button
+        .btn-container{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            padding: 0 10px;
+            transform: translateY(-50%);
+            display: flex;
+
+            button{
+                border: none;
+                background-color: transparent;
+                color: $arrow-color;
+                font-size: 3rem;
+                cursor: pointer;
+                &:last-child{
+                    margin-left: auto;
+                }
+            }
+        }
+
+        // dots样式
+        .dots{
+            position: absolute;
+            bottom: 20px;
+            list-style: none; // 去掉默认样式
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            
+            li{
+                width: $dot-size;
+                height: $dot-size;
+                border-radius: 50%;
+                border: 1px solid $arrow-color;
+                margin-left: 10px;
+                cursor: pointer;
+                &.active{
+                    background-color: $arrow-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
