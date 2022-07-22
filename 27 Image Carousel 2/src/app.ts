@@ -102,6 +102,8 @@ function resetIntervalAndCallFunc(func: Function){
  * 每次检查是否是移动到了克隆的地方
  */
 imgsContainer.addEventListener('transitionend',()=>{
+    console.log(idx);
+    
    // 每次移动完之后进行检查
    if(imgs[idx].classList.contains('first-clone')){
     imgsContainer.style.transition = 'none'
@@ -128,4 +130,15 @@ imgsContainer.addEventListener('mouseout',()=>{
     console.log("mouseout");
     
     interval = setInterval(forward,seconds)
+})
+
+
+// 修复切换浏览器页面，图片不再切换问题
+document.addEventListener('visibilitychange',()=>{
+    
+    if(document.hidden){
+        clearInterval(interval)
+    }else{
+        interval = setInterval(forward,seconds)
+    }
 })
