@@ -133,7 +133,7 @@ imgsContainer.addEventListener('mouseout',()=>{
 })
 
 
-// 修复切换浏览器页面，图片不再切换问题
+// 修复切换浏览器页面，
 document.addEventListener('visibilitychange',()=>{
     
     if(document.hidden){
