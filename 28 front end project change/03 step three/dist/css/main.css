@@ -1,0 +1,55 @@
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app.scss ***!
+  \*******************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #42b983;
+}
+body .title {
+  margin: 20px;
+  width: 100%;
+  text-align: center;
+}
+body .todolist-container {
+  width: 400px;
+  margin: 30px auto;
+}
+body .todolist-container .text {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #32485F;
+  border-radius: 10px;
+}
+body .todolist-container .text:focus {
+  outline: none;
+}
+body .todolist-container .todo-list {
+  padding: 30px;
+  list-style-type: disc;
+}
+body .todolist-container .todo-list .todo-item {
+  margin-top: 10px;
+}
+body .todolist-container .todo-list .todo-item .todo-item-text {
+  font-size: 1.2rem;
+}
+body .todolist-container .todo-list .todo-item .btn {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #32485F;
+  cursor: pointer;
+}
+body .todolist-container .todo-list .todo-item .btn:active {
+  transform: scale(0.93);
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3NzL21haW4uY3NzIiwibWFwcGluZ3MiOiI7OztBQUdBO0VBQ0k7RUFDQTtFQUNBO0FBRko7O0FBS0E7RUFDSSx5QkNWUTtBRFFaO0FBSUk7RUFDSTtFQUNBO0VBQ0E7QUFGUjtBQUtJO0VBQ0ksWUNqQkQ7RURrQkM7QUFIUjtBQU1RO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7RUFDQTtBQUpaO0FBTVk7RUFDSTtBQUpoQjtBQVNRO0VBQ0k7RUFDQTtBQVBaO0FBU1k7RUFDSTtBQVBoQjtBQVVnQjtFQUNJO0FBUnBCO0FBV2dCO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBLHlCQ3JEVDtFRHNEUztBQVRwQjtBQVlvQjtFQUNJO0FBVnhCLEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90cy1zYXNzLWRlbW8vLi9zcmMvYXBwLnNjc3MiLCJ3ZWJwYWNrOi8vdHMtc2Fzcy1kZW1vLy4vc3JjL3Njc3MvX2NvbW1vbl92YXJpYWJsZXMuc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcuL3Njc3MvY29tbW9uX3ZhcmlhYmxlcy5zY3NzJztcclxuXHJcblxyXG4qe1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbn1cclxuXHJcbmJvZHl7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkdnVlLWdyZWVuO1xyXG5cclxuICAgIC50aXRsZXtcclxuICAgICAgICBtYXJnaW46IDIwcHg7XHJcbiAgICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgfVxyXG5cclxuICAgIC50b2RvbGlzdC1jb250YWluZXJ7XHJcbiAgICAgICAgd2lkdGg6ICRzaXplO1xyXG4gICAgICAgIG1hcmdpbjogMzBweCBhdXRvO1xyXG5cclxuXHJcbiAgICAgICAgLnRleHR7XHJcbiAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICAgICAgICBwYWRkaW5nOiA4cHggMTBweDtcclxuICAgICAgICAgICAgZm9udC1zaXplOiAxcmVtO1xyXG4gICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAkdnVlLWJsdWU7XHJcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XHJcblxyXG4gICAgICAgICAgICAmOmZvY3Vze1xyXG4gICAgICAgICAgICAgICAgb3V0bGluZTogbm9uZTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuXHJcblxyXG4gICAgICAgIC50b2RvLWxpc3R7XHJcbiAgICAgICAgICAgIHBhZGRpbmc6IDMwcHg7XHJcbiAgICAgICAgICAgIGxpc3Qtc3R5bGUtdHlwZTogZGlzYztcclxuXHJcbiAgICAgICAgICAgIC50b2RvLWl0ZW17XHJcbiAgICAgICAgICAgICAgICBtYXJnaW4tdG9wOiAxMHB4O1xyXG5cclxuXHJcbiAgICAgICAgICAgICAgICAudG9kby1pdGVtLXRleHR7XHJcbiAgICAgICAgICAgICAgICAgICAgZm9udC1zaXplOiAxLjJyZW07XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgICAgIC5idG57XHJcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgICAgICAgICAgICAgICAgd2lkdGg6IDI1cHg7XHJcbiAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiAyNXB4O1xyXG4gICAgICAgICAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgICAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZjtcclxuICAgICAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkdnVlLWJsdWU7XHJcbiAgICAgICAgICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG5cclxuXHJcbiAgICAgICAgICAgICAgICAgICAgJjphY3RpdmV7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogc2NhbGUoMC45Myk7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG5cclxuICAgIH1cclxufVxyXG5cclxuXHJcblxyXG4iLCIkdnVlLWdyZWVuOiAjNDJiOTgzO1xyXG4kdnVlLWJsdWU6ICMzMjQ4NUY7XHJcbiRzaXplOiA0MDBweDsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/
