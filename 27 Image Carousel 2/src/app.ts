@@ -8,9 +8,9 @@ const next = document.getElementById('next')! as HTMLElement
 
 
 let idx = 1
+let seconds = 2000
 let size = computeSize()
 imgs = getCloneImgs()
-let seconds = 2000
 let interval = setInterval(forward,seconds)
 
 
