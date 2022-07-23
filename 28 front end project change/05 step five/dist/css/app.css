@@ -1,8 +1,64 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[7].use[0]!./src/components/ToDoItem.vue?vue&type=style&index=0&id=aa9e476e&lang=scss&scoped=true ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+.todo-item[data-v-aa9e476e] {
+  margin-top: 10px;
+}
+.todo-item .todo-item-text[data-v-aa9e476e] {
+  font-size: 1.2rem;
+}
+.todo-item .btn[data-v-aa9e476e] {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #32485F;
+  cursor: pointer;
+}
+.todo-item .btn[data-v-aa9e476e]:active {
+  transform: scale(0.93);
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[7].use[0]!./src/components/BaseInput.vue?vue&type=style&index=0&id=2d998ef9&lang=scss&scoped=true ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************/
+input[data-v-2d998ef9] {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #32485F;
+}
+input[data-v-2d998ef9]:focus {
+  outline: none;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[7].use[0]!./src/components/TodoList.vue?vue&type=style&index=0&id=3de47834&lang=scss&scoped=true ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+.todo-list-container[data-v-3de47834] {
+  margin: 30px auto;
+  width: 400px;
+}
+.todo-list-container ol[data-v-3de47834] {
+  padding: 30px;
+  list-style-type: disc;
+}
 /*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[8].use[0]!./src/App.vue?vue&type=style&index=0&id=7ba5bd90&lang=scss ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[7].use[0]!./src/App.vue?vue&type=style&index=0&id=7ba5bd90&lang=scss ***!
   \*************************************************************************************************************************************************************************************************************************************************************************/
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #42b983;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/dist/index.js??ruleSet[1].rules[7].use[0]!./src/App.vue?vue&type=style&index=1&id=7ba5bd90&lang=scss&scoped=true ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+h1[data-v-7ba5bd90] {
+  width: 100%;
+  margin: 20px;
+  text-align: center;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3NzL2FwcC5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQ0E7RUFDSTtBQ0FKLEMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly90cy1zYXNzLWRlbW8vLi9zcmMvQXBwLnZ1ZSIsIndlYnBhY2s6Ly90cy1zYXNzLWRlbW8vLi9BcHAudnVlIl0sInNvdXJjZXNDb250ZW50IjpbIlxyXG5oMXtcclxuICAgIGNvbG9yOiByZWQ7XHJcbn1cclxuIiwiaDEge1xuICBjb2xvcjogcmVkO1xufSJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3NzL2FwcC5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBR0k7RUFDSTtBQ0ZSO0FESVE7RUFDSTtBQ0ZaO0FES1E7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0EseUJFZkQ7RUZnQkM7QUNIWjtBREtZO0VBQ0k7QUNIaEIsQzs7OztBRWJJO0VBQ0k7RUFDQTtFQUNBO0VBQ0E7QUNIUjtBREtRO0VBQ0k7QUNIWixDOzs7O0FDTEU7RUFDRTtFQUNBLFlISEc7QUlDUDtBRElJO0VBQ0U7RUFDQTtBQ0ZOLEM7Ozs7QUNISTtFQUNJO0VBQ0E7QUNIUjtBRE1JO0VBQ0kseUJMVkk7QU1PWixDOzs7O0FETkk7RUFDSTtFQUNBO0VBQ0E7QUNBUixDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vdHMtc2Fzcy1kZW1vLy4vc3JjL2NvbXBvbmVudHMvVG9Eb0l0ZW0udnVlIiwid2VicGFjazovL3RzLXNhc3MtZGVtby8uL1RvRG9JdGVtLnZ1ZSIsIndlYnBhY2s6Ly90cy1zYXNzLWRlbW8vLi9zcmMvc2Nzcy9fY29tbW9uX3ZhcmlhYmxlcy5zY3NzIiwid2VicGFjazovL3RzLXNhc3MtZGVtby8uL3NyYy9jb21wb25lbnRzL0Jhc2VJbnB1dC52dWUiLCJ3ZWJwYWNrOi8vdHMtc2Fzcy1kZW1vLy4vQmFzZUlucHV0LnZ1ZSIsIndlYnBhY2s6Ly90cy1zYXNzLWRlbW8vLi9zcmMvY29tcG9uZW50cy9Ub2RvTGlzdC52dWUiLCJ3ZWJwYWNrOi8vdHMtc2Fzcy1kZW1vLy4vVG9kb0xpc3QudnVlIiwid2VicGFjazovL3RzLXNhc3MtZGVtby8uL3NyYy9BcHAudnVlIiwid2VicGFjazovL3RzLXNhc3MtZGVtby8uL0FwcC52dWUiXSwic291cmNlc0NvbnRlbnQiOlsiXHJcblxyXG4gICAgQGltcG9ydCAnQC9zY3NzL2NvbW1vbl92YXJpYWJsZXMnO1xyXG4gICAgLnRvZG8taXRlbXtcclxuICAgICAgICBtYXJnaW4tdG9wOiAxMHB4O1xyXG5cclxuICAgICAgICAudG9kby1pdGVtLXRleHR7XHJcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMS4ycmVtO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgLmJ0bntcclxuICAgICAgICAgICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgICAgICAgICAgIHdpZHRoOiAyNXB4O1xyXG4gICAgICAgICAgICBoZWlnaHQ6IDI1cHg7XHJcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICAgICAgICAgICAgY29sb3I6ICNmZmY7XHJcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICR2dWUtYmx1ZTtcclxuICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xyXG5cclxuICAgICAgICAgICAgJjphY3RpdmV7XHJcbiAgICAgICAgICAgICAgICB0cmFuc2Zvcm06IHNjYWxlKDAuOTMpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4iLCIudG9kby1pdGVtIHtcbiAgbWFyZ2luLXRvcDogMTBweDtcbn1cbi50b2RvLWl0ZW0gLnRvZG8taXRlbS10ZXh0IHtcbiAgZm9udC1zaXplOiAxLjJyZW07XG59XG4udG9kby1pdGVtIC5idG4ge1xuICBtYXJnaW4tbGVmdDogMTBweDtcbiAgd2lkdGg6IDI1cHg7XG4gIGhlaWdodDogMjVweDtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xuICBjb2xvcjogI2ZmZjtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzMyNDg1RjtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLnRvZG8taXRlbSAuYnRuOmFjdGl2ZSB7XG4gIHRyYW5zZm9ybTogc2NhbGUoMC45Myk7XG59IiwiJHZ1ZS1ncmVlbjogIzQyYjk4MztcclxuJHZ1ZS1ibHVlOiAjMzI0ODVGO1xyXG4kc2l6ZTogNDAwcHg7IiwiXHJcblxyXG4gICAgQGltcG9ydCAnQC9zY3NzL2NvbW1vbl92YXJpYWJsZXMnO1xyXG5cclxuICAgIGlucHV0e1xyXG4gICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICAgIHBhZGRpbmc6IDhweCAxMHB4O1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMXJlbTtcclxuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAkdnVlLWJsdWU7XHJcblxyXG4gICAgICAgICY6Zm9jdXN7XHJcbiAgICAgICAgICAgIG91dGxpbmU6bm9uZTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4iLCJpbnB1dCB7XG4gIHdpZHRoOiAxMDAlO1xuICBwYWRkaW5nOiA4cHggMTBweDtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBib3JkZXI6IDFweCBzb2xpZCAjMzI0ODVGO1xufVxuaW5wdXQ6Zm9jdXMge1xuICBvdXRsaW5lOiBub25lO1xufSIsIlxyXG4gIEBpbXBvcnQgJ0Avc2Nzcy9fY29tbW9uX3ZhcmlhYmxlcy5zY3NzJztcclxuXHJcbiAgLnRvZG8tbGlzdC1jb250YWluZXJ7XHJcbiAgICBtYXJnaW46IDMwcHggYXV0bztcclxuICAgIHdpZHRoOiAkc2l6ZTtcclxuICBcclxuICAgIG9se1xyXG4gICAgICBwYWRkaW5nOiAzMHB4O1xyXG4gICAgICBsaXN0LXN0eWxlLXR5cGU6IGRpc2M7XHJcbiAgICB9XHJcbiAgfVxyXG4iLCIudG9kby1saXN0LWNvbnRhaW5lciB7XG4gIG1hcmdpbjogMzBweCBhdXRvO1xuICB3aWR0aDogNDAwcHg7XG59XG4udG9kby1saXN0LWNvbnRhaW5lciBvbCB7XG4gIHBhZGRpbmc6IDMwcHg7XG4gIGxpc3Qtc3R5bGUtdHlwZTogZGlzYztcbn0iLCJcclxuXHJcbiAgICBAaW1wb3J0ICdAL3Njc3MvY29tbW9uX3ZhcmlhYmxlcyc7XHJcblxyXG4gICAgKntcclxuICAgICAgICBtYXJnaW46IDA7XHJcbiAgICAgICAgcGFkZGluZzogMDtcclxuICAgIH1cclxuXHJcbiAgICBib2R5e1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICR2dWUtZ3JlZW47XHJcbiAgICB9XHJcbiIsIioge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG59XG5cbmJvZHkge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDJiOTgzO1xufSJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/

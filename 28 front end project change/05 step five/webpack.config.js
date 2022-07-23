@@ -10,6 +10,9 @@ module.exports = {
     main: './src/ts/main.ts'
   },
   devtool: 'inline-source-map', /**方便定位 */
+  devServer: {
+    static: './dist',
+  },
   output: {
     filename: 'js/[name].js',  /*生成的文件是app.js */
     path: path.resolve(__dirname, 'dist'),
@@ -37,7 +40,11 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        //use: 'ts-loader', 
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+        },
         exclude: /node_modules/,
       },
       {
@@ -73,5 +80,8 @@ module.exports = {
       chunkFilename: '[id].[contenthash].css'
     }),
     new VueLoaderPlugin()
-  ]
+  ],
+  optimization:{
+    runtimeChunk: 'single',
+  }
 };

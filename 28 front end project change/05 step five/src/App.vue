@@ -1,22 +1,36 @@
 <template>
-    <div>
-        <h1>TodoList App</h1>
-        <button @click="counter++">{{counter}}</button>
-    </div>
+    <h1 class="title">Todo List App Demo</h1>
+    <TodoList></TodoList>
 </template>
 
-<script>
+<script lang="ts">
+import TodoList from '@/components/TodoList.vue'
+
 export default {
-    data(){
-        return {
-            counter: 0
-        }
+    components: {
+        TodoList
     }
 }
 </script>
 
 <style lang="scss">
-h1{
-    color: red;
-}
+
+    @import '@/scss/common_variables';
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        background-color: $vue-green;
+    }
+</style>
+
+<style lang="scss" scoped>
+    h1{
+        width: 100%;
+        margin: 20px;
+        text-align: center;
+    }
 </style>

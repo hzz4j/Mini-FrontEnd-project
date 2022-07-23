@@ -8,6 +8,7 @@
       "allowJs": true,
       "jsx": "preserve",    
       "moduleResolution": "node",
+      "strictPropertyInitialization": false, // https://github.com/vuejs/core/issues/5347
       "baseUrl": ".",
       "paths": {
         "@/*": [        
