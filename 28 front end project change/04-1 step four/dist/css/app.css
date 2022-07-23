@@ -1,0 +1,55 @@
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/app.scss ***!
+  \*******************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #42b983;
+}
+body .title {
+  margin: 20px;
+  width: 100%;
+  text-align: center;
+}
+body .todolist-container {
+  width: 400px;
+  margin: 30px auto;
+}
+body .todolist-container .text {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #32485F;
+  border-radius: 10px;
+}
+body .todolist-container .text:focus {
+  outline: none;
+}
+body .todolist-container .todo-list {
+  padding: 30px;
+  list-style-type: disc;
+}
+body .todolist-container .todo-list .todo-item {
+  margin-top: 10px;
+}
+body .todolist-container .todo-list .todo-item .todo-item-text {
+  font-size: 1.2rem;
+}
+body .todolist-container .todo-list .todo-item .btn {
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #32485F;
+  cursor: pointer;
+}
+body .todolist-container .todo-list .todo-item .btn:active {
+  transform: scale(0.93);
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3NzL2FwcC5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBR0E7RUFDSTtFQUNBO0VBQ0E7QUFGSjs7QUFLQTtFQUNJLHlCQ1ZRO0FEUVo7QUFJSTtFQUNJO0VBQ0E7RUFDQTtBQUZSO0FBS0k7RUFDSSxZQ2pCRDtFRGtCQztBQUhSO0FBTVE7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0FBSlo7QUFNWTtFQUNJO0FBSmhCO0FBU1E7RUFDSTtFQUNBO0FBUFo7QUFTWTtFQUNJO0FBUGhCO0FBVWdCO0VBQ0k7QUFScEI7QUFXZ0I7RUFDSTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0EseUJDckRUO0VEc0RTO0FBVHBCO0FBWW9CO0VBQ0k7QUFWeEIsQyIsInNvdXJjZXMiOlsid2VicGFjazovL3RzLXNhc3MtZGVtby8uL3NyYy9hcHAuc2NzcyIsIndlYnBhY2s6Ly90cy1zYXNzLWRlbW8vLi9zcmMvc2Nzcy9fY29tbW9uX3ZhcmlhYmxlcy5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4vc2Nzcy9jb21tb25fdmFyaWFibGVzLnNjc3MnO1xyXG5cclxuXHJcbip7XHJcbiAgICBtYXJnaW46IDA7XHJcbiAgICBwYWRkaW5nOiAwO1xyXG4gICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxufVxyXG5cclxuYm9keXtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICR2dWUtZ3JlZW47XHJcblxyXG4gICAgLnRpdGxle1xyXG4gICAgICAgIG1hcmdpbjogMjBweDtcclxuICAgICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICB9XHJcblxyXG4gICAgLnRvZG9saXN0LWNvbnRhaW5lcntcclxuICAgICAgICB3aWR0aDogJHNpemU7XHJcbiAgICAgICAgbWFyZ2luOiAzMHB4IGF1dG87XHJcblxyXG5cclxuICAgICAgICAudGV4dHtcclxuICAgICAgICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICAgICAgICAgIHBhZGRpbmc6IDhweCAxMHB4O1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDFyZW07XHJcbiAgICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICR2dWUtYmx1ZTtcclxuICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuXHJcbiAgICAgICAgICAgICY6Zm9jdXN7XHJcbiAgICAgICAgICAgICAgICBvdXRsaW5lOiBub25lO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG5cclxuXHJcbiAgICAgICAgLnRvZG8tbGlzdHtcclxuICAgICAgICAgICAgcGFkZGluZzogMzBweDtcclxuICAgICAgICAgICAgbGlzdC1zdHlsZS10eXBlOiBkaXNjO1xyXG5cclxuICAgICAgICAgICAgLnRvZG8taXRlbXtcclxuICAgICAgICAgICAgICAgIG1hcmdpbi10b3A6IDEwcHg7XHJcblxyXG5cclxuICAgICAgICAgICAgICAgIC50b2RvLWl0ZW0tdGV4dHtcclxuICAgICAgICAgICAgICAgICAgICBmb250LXNpemU6IDEuMnJlbTtcclxuICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgLmJ0bntcclxuICAgICAgICAgICAgICAgICAgICBtYXJnaW4tbGVmdDogMTBweDtcclxuICAgICAgICAgICAgICAgICAgICB3aWR0aDogMjVweDtcclxuICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDI1cHg7XHJcbiAgICAgICAgICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgICAgICAgICAgICAgICAgIGNvbG9yOiAjZmZmO1xyXG4gICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICR2dWUtYmx1ZTtcclxuICAgICAgICAgICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcblxyXG5cclxuICAgICAgICAgICAgICAgICAgICAmOmFjdGl2ZXtcclxuICAgICAgICAgICAgICAgICAgICAgICAgdHJhbnNmb3JtOiBzY2FsZSgwLjkzKTtcclxuICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcblxyXG4gICAgfVxyXG59XHJcblxyXG5cclxuXHJcbiIsIiR2dWUtZ3JlZW46ICM0MmI5ODM7XHJcbiR2dWUtYmx1ZTogIzMyNDg1RjtcclxuJHNpemU6IDQwMHB4OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/

@@ -8,9 +8,29 @@
 </head>
 <body>
     <div id="app">
-        <button @click="count++">
-          Count is: {{ count }}
-        </button>
+        <h1 class="title">Todo List App Demo</h1>
+        <div class="todolist-container">
+            <input 
+                type="text" 
+                name="text" 
+                class="text"
+                id="text"
+                autofocus
+                placeholder="Add todo"
+                @keyup.enter="addTodo">
+            <ol class="todo-list" id="todo-list">
+                <li 
+                    v-for="todoItem in todoItems"
+                    :key="todoItem.id"
+                    class="todo-item">
+
+                    <span class="todo-item-text">{{todoItem.title}}</span>
+                    <button class="btn" @click="deleteTodoItem(todoItem)">
+                        X
+                    </button>
+                </li>
+            </ol>
+        </div>
     </div>
 </body>
 </html>
