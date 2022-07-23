@@ -15,5 +15,8 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>>
+<style lang="scss">
+h1{
+    color: red;
+}
+</style>
