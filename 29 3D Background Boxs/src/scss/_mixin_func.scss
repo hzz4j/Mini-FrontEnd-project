@@ -1,3 +1,6 @@
+/**
+ * 控制显示整张图片的区域
+ */
 @mixin backgroundImageSet($url,$size) {
     background-image: url($url);
     background-repeat: no-repeat;
