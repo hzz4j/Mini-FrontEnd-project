@@ -1,0 +1,6 @@
+@mixin backgroundImageSet($url,$size) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: calc($size*2) $size;
+    background-position: -300px 0px;
+}
