@@ -1,0 +1,43 @@
+@import './scss/_common_variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $dark;
+  color: #fff;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .container{
+    width: 500px;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+
+    .joke{
+      margin: 20px auto;
+    }
+
+    .btn{
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover{
+        border: 1px solid $blue;
+      }
+    }
+  }
+}
