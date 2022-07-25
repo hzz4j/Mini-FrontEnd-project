@@ -1,0 +1,92 @@
+@import './scss/_common_variables';
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $dark;
+
+
+  .container{
+    background-color: $white;
+    max-width: 300px;
+    // max-width: 100%;
+    color: $white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgba(76, 100, 238, 0.8);
+    overflow: hidden;
+
+    header{
+      padding: 20px;
+      background-color: $blue;
+
+      .subtitle{
+        display: inline-block;
+        margin: 10px 0 20px;  // small 标签得变成inline-block margin才会生效
+        opacity: 0.6;
+      }
+
+      .search{
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: none;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        color: white;
+        &:focus{
+          outline: none;
+        }
+      }
+
+    }
+
+    .userlist{
+      color:$dark;
+      
+      list-style: none;
+      max-height: 400px;
+      overflow-y: auto;
+
+      .userinfo{
+        display: flex;
+        padding: 20px;
+
+        // 下划线得设置
+        &:not(:last-of-type){
+          border-bottom: 1px solid $gray;
+        }
+
+        &.hidden{
+          display: none;
+        }
+
+        img{
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        
+        div{
+          margin-left: 10px;
+          .username{
+            font-size: 1rem;
+          }
+
+          .location{
+            margin-top: 10px;
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
