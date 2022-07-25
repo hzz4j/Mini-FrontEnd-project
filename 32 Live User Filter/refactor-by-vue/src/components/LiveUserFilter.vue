@@ -36,9 +36,9 @@
 <script lang="ts" setup>
 
 import {ref,onMounted,watch,computed,reactive } from 'vue'
-import type { Ref } from 'vue';
-import type UserInfo from '../ts/types';
-import RAND_USER_API from '../ts/config';
+import type { Ref } from 'vue'
+import type UserInfo from '../ts/types'
+import RAND_USER_API from '../ts/config'
 
 const search = ref("")
 // const userList:Ref<UserInfo[]> = ref([])
