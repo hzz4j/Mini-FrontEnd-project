@@ -33,5 +33,6 @@ Learn and Use HTML ,CSS,Javascript or Typescript knowledge to build mini project
 | 23   | [Image Carousel 2](https://q10viking.github.io/Mini-FrontEnd-project/27%20Image%20Carousel%202/dist/) |
 | 24   | [3D Background boxs](https://q10viking.github.io/Mini-FrontEnd-project/29%203D%20Background%20Boxs/dist/index.html) |
 | 25   | [Dad Jokes](https://q10viking.github.io/Mini-FrontEnd-project/30%20Dad%20Jokes/dist/) |
-| 26   | [Background Slider](https://q10viking.github.io/Mini-FrontEnd-project/31%20Background%20slider/vanilla/dist/)                                        |
+| 26   | [Background Slider](https://q10viking.github.io/Mini-FrontEnd-project/31%20Background%20slider/vanilla/dist/) |
+| 27   | [Live User Filter](https://q10viking.github.io/Mini-FrontEnd-project/32%20Live%20User%20Filter/vanilla/dist/)                                         |
 
