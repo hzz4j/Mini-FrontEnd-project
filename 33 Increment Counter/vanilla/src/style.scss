@@ -1,0 +1,44 @@
+@import './scss/_common_variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $dark;
+  color: $white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+
+  .container{
+    display: flex;
+    flex-direction: row;
+
+    @media(max-width: 580px){
+      flex-direction: column;
+    }
+
+    .item{
+      margin: 30px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .fa-brands{
+        font-size: 2rem;
+      }
+
+      .counter{
+        margin: 20px 0 10px;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
