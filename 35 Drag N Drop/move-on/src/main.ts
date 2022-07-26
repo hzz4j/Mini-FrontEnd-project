@@ -4,52 +4,15 @@ const fill = document.querySelector(".fill")!
 const empties = document.querySelectorAll(".empty")!
 
 
-setTimeout(()=>{empties[2].appendChild(fill)},3000)
-
-
-empties.forEach(empty => {
-  empty.addEventListener("dragenter",dragEnter)
-  empty.addEventListener("dragover", dragOver)
-  empty.addEventListener("dragleave",dragLeave)
-  empty.addEventListener("drop",dragDrop)
-})
-
-fill.addEventListener("dragstart",dragStart)
-fill.addEventListener("dragend",dragEnd)
-
-
-/**
- * 传进来的就是e.target
- * @param this 
- */
-// function dragStart(this:HTMLElement){
-//   console.log(this.getAttribute("name-attr"),"drag start")
-// }
-
-function dragStart(event:Event){
-  let el = event.target as HTMLElement
-  console.log(el.getAttribute("name-attr"),"drag start")
-}
-
-function dragEnd(this:HTMLElement){
-  console.log(this.getAttribute("name-attr"),"drag end");
-}
-
-
-function dragEnter(this:HTMLElement){
-  console.log("drag enter to ",this.getAttribute("name-attr"))
-}
-
-function dragOver(event:Event){
-  event.preventDefault()  // 阻止dragover的默认行为，否者drop事件不会触发
-  console.log("drag over on")
-}
-
-function dragLeave(this:HTMLElement){
-  console.log("drag leave from ",this.getAttribute("name-attr"))
-}
-
-function dragDrop(this:HTMLElement){
-  console.log("drag drop in ",this.getAttribute("name-attr"));
-  this.appendChild(fill)
+let idx = 0
+setTimeout(moveImage,1500)
+function moveImage(){
+  idx++
+  if(idx>empties.length-1){
+    idx = 0
+  }
+  // 移动元素
+  empties[idx].appendChild(fill)
+  // 无限循环
+  setTimeout(moveImage,1500)
 }
