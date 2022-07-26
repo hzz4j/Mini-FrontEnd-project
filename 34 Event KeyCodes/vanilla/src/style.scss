@@ -1,0 +1,64 @@
+@import './scss/_common_variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.share-section{
+    border: 1px solid $blue;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px $blue;
+}
+
+body{
+    background-color: $dark;
+    color:$white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container{
+        display: flex;
+        
+
+
+        .key{
+
+            @extend .share-section;
+            position: relative;
+            color: $dark;
+            background-color: $white;
+            margin: 20px;
+            padding: 20px;
+            min-width: 150px;
+            text-align: center;
+            font-weight: bold;
+
+
+            .content{
+                font-size: 1.5rem;
+            }
+
+            small{
+                position: absolute;
+                top: -30px;
+                left: 0;
+                width: 100%;
+                color:$white;
+                font-size: 14px;
+            }
+        }
+
+        .msg{
+            @extend .share-section;
+            background-color: $white;
+            color: $dark;
+            padding: 20px;
+            font-weight: bold;
+        }
+    }
+}
