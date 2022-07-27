@@ -35,7 +35,7 @@ function dragEnd(this:HTMLElement){
 
 
 function dragEnter(this:HTMLElement){
-  this.classList.add('over')
+  this.classList.add('hover')
   console.log("drag enter to ",this.getAttribute("name-attr"))
 }
 
@@ -45,12 +45,12 @@ function dragOver(event:Event){
 }
 
 function dragLeave(this:HTMLElement){
-  this.classList.remove('over')
+  this.classList.remove('hover')
   console.log("drag leave from ",this.getAttribute("name-attr"))
 }
 
 function dragDrop(this:HTMLElement){
-  this.classList.remove('over')
-  console.log("drag drop in ",this.getAttribute("name-attr"));
+  this.classList.remove('hover')
   this.appendChild(fill) // 核心
+  console.log("drag drop in ",this.getAttribute("name-attr"));
 }
