@@ -50,12 +50,13 @@ export default function handleContent(content:HTMLElement){
             content.style.top = content.offsetTop-10+'px'
         }
         
-
+        // 开始的位置
         startX = event.clientX
         startY = event.clientY
         left = +content.style.left.replace("px","")
         top = +content.style.top.replace("px","")
 
+        // 在document上监听mousemove事件
         document.addEventListener("mousemove",moveMove)
 
         startMove = true
@@ -75,6 +76,7 @@ export default function handleContent(content:HTMLElement){
 
     function moveStop(){
         startMove = false
+        // clear event listener
         document.removeEventListener("mousemove",moveMove)
     }
 }
