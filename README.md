@@ -36,8 +36,8 @@ Learn and Use HTML ,CSS,Javascript or Typescript And Vue3 knowledge to build min
 | 26   | [Background Slider](https://q10viking.github.io/Mini-FrontEnd-project/31%20Background%20slider/vanilla/dist/) |
 | 27   | [Live User Filter](https://q10viking.github.io/Mini-FrontEnd-project/32%20Live%20User%20Filter/vanilla/dist/) |
 | 28   | [Increment Counter](https://q10viking.github.io/Mini-FrontEnd-project/33%20Increment%20Counter/vite-project/dist/) |
-| 29   | [Event Keycodes](https://q10viking.github.io/Mini-FrontEnd-project/34%20Event%20KeyCodes/vite-project/dist/)                                           |
-|      |                                                              |
+| 29   | [Event Keycodes](https://q10viking.github.io/Mini-FrontEnd-project/34%20Event%20KeyCodes/vite-project/dist/) |
+| 30   | [Drag Move](https://q10viking.github.io/Mini-FrontEnd-project/36%20Drag%20Move/vanilla/dist/)                                                |
 |      |                                                              |
 |      |                                                              |
 |      |                                                              |
