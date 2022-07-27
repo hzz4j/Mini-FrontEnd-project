@@ -1,0 +1,92 @@
+/**
+ * Styles for the main 'things' we are dragging 
+ *
+ * 		- Give the cursor a specific state when hovering over the draggable elements
+ * 		- Give the elements a solid background
+ * 		- Create a basic rectangular shape for the draggable elements with plenty of space
+ * 		- Set the z-index to 1 as a baseline
+ * 		- Use a slight box shadow around the edges of the draggable elements
+ * 		- A solid 1px border is a good alternative if box-shadow is not your cup of tea
+ */
+ .thing {
+
+	/**
+	 * Setting the cursor state to 'move' or 'grab' is key to indicating draggability 
+	 * for desktop users
+	 */
+	cursor: move;
+
+	/**
+	 * If no background is given, the draggable elements are see-through and thus will not cover 
+	 * one another when stacked, or when one is dragged over the other.
+	 */
+	background: #fcfcfc;
+	
+	height: 2em;
+	width: 300px;
+	max-width: 100%;
+
+	padding: 0.5em;
+	margin-bottom: 0.5em;
+
+	z-index: 1;
+
+	box-shadow: rgba( 0, 0, 0, 0.3 ) 0px 0px 1px 1px;
+
+} /* .thing */
+
+/**
+ * Elements inside of each draggable .thing (such as the label) need to have the same cursor
+ * property as the .thing's themselves
+ */
+.thing * {
+	cursor: move;
+}
+
+/**
+ * Make sure that an element actively being dragged has a higher z-index than 
+ * the others. The class 'ui-draggable-dragging' is automatically added by jQuery UI.
+ */
+.thing.ui-draggable-dragging {
+	z-index: 100;
+}
+
+/**
+ * The text labels for the draggable elements
+ * 
+ * We're mainly styling these to make them vertically centered, so we're using absolute positioning 
+ * combined with the `margin: auto` rule to achive this
+ */
+.thing label {
+
+	height: 1em;
+
+	position: absolute;
+	left: 1em;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+/**
+ * The group of dots which indicate draggability for each 'thing'
+ *
+ * Here, we are just declaring the dimensions and positioning.  The actual dots themselves are an SVG graphic
+ * which is generated via JavaScript in js/draggable.js
+ */
+.draggable-indicator {
+
+	width: 16px;
+	height: 16px;
+
+	position: absolute;
+	right: 0.5em;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+/* coloring the individual dots within each group */
+.draggable-indicator rect {
+	fill: #ccc;
+}
