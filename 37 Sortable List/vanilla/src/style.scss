@@ -1,0 +1,72 @@
+@import './scss/_common_variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $theme-color;
+  color: $second-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title{
+    margin: 20px 0 30px;
+  }
+
+  .books-container{
+    margin-top: 30px;
+    list-style: none;
+
+
+    .book{
+      display: flex;
+      background-color: $second-color;
+      color: #000;
+      border: 1px solid #888;
+      position: relative;
+      z-index: 1;
+      
+     
+      .number{
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 1.5rem;
+        background-color: $third-color;
+      }
+
+      div{
+        width: 200px;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: move;
+      }
+
+      &.hover div{
+        background-color: #888;
+      }
+    }
+  }
+
+  .check-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $third-color;
+    cursor: pointer;
+
+    &:active{
+      transform: scale(0.98);
+    }
+  }
+}
