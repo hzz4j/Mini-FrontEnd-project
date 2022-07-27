@@ -48,6 +48,16 @@ body{
         justify-content: space-between;
         align-items: center;
         cursor: move;
+
+        .name{
+          &.right{
+            color: green;
+          }
+
+          &.error{
+            color: red;
+          }
+        }
       }
 
       &.hover div{
