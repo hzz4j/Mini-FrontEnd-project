@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-defineProps({
+const props = defineProps({
     idx: {
         type: Number,
         required: true
@@ -10,26 +10,69 @@ defineProps({
         required: true
     }
 })
+// 普通定义
+// defineEmits(['change'])
+// 定义事件，并带有参数
+const emit = defineEmits<{
+    (e:'change',srcIdx:number,targetIdx:number):void  // 方法签名
+    }>()
 
 const counter = ref(0)
+const isActive = ref(false)
 
-
-function dragStart(){
+function dragStart(event:DragEvent){
+    event.dataTransfer?.setData("text/plain", `${props.idx}`)
     console.log("start");
-    
 }
 
+function dragEnd(){
+    console.log("drag end");
+}
+
+function dragEnter(){
+    counter.value++
+    isActive.value = true
+    console.log("drag enter",counter.value);
+}
+function dragOver(){
+    console.log("Over");    
+}
+function dragLeave(){
+    counter.value--
+    if(!counter.value){
+        isActive.value = false
+    }
+    console.log("drag leave");
+}
+function dragDrop(event:DragEvent){
+    const srcIdxStr = event.dataTransfer?.getData("text/plain")
+    let srcIdx = 0
+    if(typeof srcIdxStr === 'string'){
+        srcIdx = parseInt(srcIdxStr)
+        console.log(srcIdx,props.idx);
+        emit("change",srcIdx,props.idx)
+    }
+    counter.value = 0
+    isActive.value = false
+    console.log("drag drop");
+}
 </script>
 
 <template>
     <li class="book"
         :data-idx="idx" 
-        :data-counter="counter">
+        :data-counter="counter"
+        :class="{hover: isActive}"
+        @dragenter="dragEnter"
+        @dragover.prevent="dragOver"
+        @dragleave="dragLeave"
+        @drop="dragDrop">
 
         <span class="number">{{idx+1}}</span>
         <div draggable="true" 
             class="draggable"
-            @dragstart="dragStart">
+            @dragstart="dragStart"
+            @dragend="dragEnd">
 
           <p class="name">{{book}}</p>
           <font-awesome-icon icon="fa-solid fa-grip-lines" />
@@ -55,23 +98,22 @@ function dragStart(){
         background-color: $third-color;
     }
 
-    div{
+
+    &.right .draggable .name{
+        color: green;
+    }
+
+    &.error .draggable .name{
+        color: red;
+    }
+
+    .draggable{
         width: 200px;
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: move;
-
-        .name{
-            &.right{
-                color: green;
-            }
-
-            &.error{
-                color: red;
-            }
-        }
     }
 
     &.hover div{
