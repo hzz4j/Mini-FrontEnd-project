@@ -1,0 +1,17 @@
+@import './scss/_common_variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background-color: $primary-theme;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
