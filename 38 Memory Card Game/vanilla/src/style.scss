@@ -1,0 +1,102 @@
+@import './scss/_common_variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $primary-theme;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container{
+    background-color: $second-color;
+    height: 400px;
+    width: 400px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(255,255,255,0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card{
+      position: relative;
+      height: calc(100%/4 - 10px);
+      width: calc(100%/4 - 10px);
+  
+
+      .view{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height: 100%;
+        backface-visibility: hidden; // 反转到背面隐藏
+        background-color: #fff;
+        box-shadow: 1px 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.2s linear;
+        pointer-events: none; // 很有用
+      }
+
+      
+
+      .front-view{
+        @extend .view;
+        font-size: 2rem;
+        color: orange;
+        transform: rotateY(0deg)
+      }
+
+      .back-view{
+        @extend .view;
+        
+        transform: rotateY(180deg); // 反转到背面隐藏
+        img{
+          width: 45px;
+          height: 45px;
+        }
+      }
+
+      // 点击翻牌
+      &.flip{
+        .front-view{
+          transform: rotateY(180deg);
+        }
+
+        .back-view{
+          transform: rotateY(0deg);
+        }
+      }
+
+      // 抖动
+      &.shake{
+        animation: shake 0.35s ease-in-out;
+
+        @keyframes shake {
+          0%,100%{
+            transform: translateX(0);
+          }
+          20%{
+            transform: translateX(12px);
+          }
+          40%{
+            transform: translateX(-12px);
+          }
+          60%{
+            transform: translateX(5px);
+          }
+          80%{
+            transform: translateX(-5px);
+          }
+
+        }
+      }
+    }
+  }
+}
