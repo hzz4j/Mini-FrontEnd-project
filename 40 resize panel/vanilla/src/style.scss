@@ -1,0 +1,56 @@
+$border-size: 6px;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+
+  .container{
+    display: flex;
+    height: 50%;
+    width: 100vw;
+    border: $border-size solid #666;
+    overflow: hidden;
+  }
+
+  .pannel{
+    padding: 20px;
+    height: 100%;
+    width: 50%;
+    min-width: 200px;
+    user-select: none;
+  }
+
+  .left-pannel{
+   @extend .pannel;
+  }
+  .right-pannel{
+    @extend .pannel;
+    position:relative;
+    padding-left: 26px;
+
+    .gutter{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background-color: #666;
+      cursor:col-resize;
+      
+      &:hover{
+        border: 1px dashed blue;
+      }
+    }
+   }
+
+}
