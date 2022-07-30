@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #272822;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+    pre[class*="language-"]{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .code-box{
+        flex: 1;
+        height: 100%;
+        overflow: auto;
+        // width: 50%;
+    }
+
+    .show-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0;
+        background-color: white;
+        height: 100%;
+        transition: flex 1s linear;
+        &.show{
+            flex: 1;
+        }
+
+        .heart{
+            cursor: pointer;
+        }
+    }
+
+
+    /*庆祝*/
+    .celebrate{
+        position: absolute;
+        font-size: 2rem;
+        top: 10px;
+        left: 10px;
+        transition: all 3s linear;
+        transform: rotateZ(45deg);
+    }
+}
+
