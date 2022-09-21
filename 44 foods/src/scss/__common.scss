@@ -9,7 +9,10 @@
 
 html{
     font-size: 62.5%;
-    // min-width: 1200px;
+    
+    @media(max-width: 1400px){
+        font-size: 50%;
+    }
 }
 
 
