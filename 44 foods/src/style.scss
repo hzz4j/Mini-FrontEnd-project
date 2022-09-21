@@ -213,4 +213,78 @@
             
         }
     }
+
+    .footer{
+        position: relative;
+        width: 100%;
+        height: 15rem;
+        padding: 3rem 0;
+        background-color: $color-grey-dark-deep;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        .footer-description{
+            .footer-title{
+                font-size: 2rem;
+                font-weight: 800;
+                color: $color-orange-deep;
+            }
+
+            .footer-paragraph{
+                padding-top: 1rem;
+                font-size: 1rem;
+                color: #888;
+            }
+        }
+
+        .signup-form{
+            width: 35rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            .signup-form-input{
+                width: 100%;
+                height: 5rem;
+                font-size: 2rem;
+
+                &::placeholder{
+                    color: $color-orange-deep;
+                }
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            .signup-btn{
+                position: absolute;
+                right: 0;
+                width: 5rem;
+                height: 5rem;
+                font-size: 2rem;
+                cursor: pointer;
+                border: none;
+                color: $color-orange-deep;
+                background-color: $color-grey-dark;
+
+                &:hover{
+                    color: $color-orange;
+                }
+            }
+        }
+        
+        .copyright{
+            position: absolute;
+            bottom: 3rem;
+            width: 100%;
+            color: #fff;
+            padding-top: 1rem;
+            text-align: center;
+            border-top: 1px solid $color-orange;
+        }
+
+    }
 }
