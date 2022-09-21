@@ -66,6 +66,12 @@
     border-radius: 30rem 30rem 15rem 15rem;
     z-index: 99;
     transition: top $unit-time $unit-time;
+
+
+    @media(max-width: 550px){
+        left: 3rem;
+    }
+
     &::before{
         content: " ";
         position: absolute;
