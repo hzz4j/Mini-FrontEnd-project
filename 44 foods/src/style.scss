@@ -3,37 +3,102 @@
 
 
 .container{
-    background-color: $color-grey-dark;
+   
     .section-1{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        .section-heading{
-            color: $color-white;
-            font-size: 4.2rem;
-            font-weight: 800;
-            text-transform: capitalize;
-            text-shadow: 0.3rem 0.3rem 0.3rem #000;
-            letter-spacing: 2px;
-        }
-
+        @extend .share-section;
+        background-color: $color-grey-dark;
         .section-1-icons{
             color: $color-orange;
             font-size: 20rem;
-
             i{
                 position: absolute;
                 transform: translate(-50%,-50%) scale(0);
-
+                transition: all 0.3s;
                 &.change{
                     transform: translate(-50%,-50%) scale(1);
+                    // 延迟一下，无缝衔接
+                    transition: all 0.3s 0.3s;
                 }
             }
-
-            
         }
     }
+
+    .section-2{
+        @extend .share-section;
+        background-color: $color-grey-dark-deep;
+
+        .cards-container{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .card{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 20rem;
+                padding: 10px;
+                background-color:$color-orange;
+                position: relative;
+                transform: rotateY(20deg) skewX(-2deg);
+                transition: transform 1s,box-shadow 1s;
+
+                &:hover{
+                    transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+                    box-shadow: 1rem 1rem 1rem #000;
+                }
+                // 3D
+                &::before{
+                    content: " ";
+                    position: absolute;
+                    height: 100%;
+                    width: 1rem;
+                    background-color: $color-orange-deep;
+                    left: -1rem;
+                    top: 0;
+                    transform: skewY(45deg);
+                    transform-origin: right;
+                    box-shadow: -0.1rem -0.1rem 0.1rem #000;
+                }
+
+                &::after{
+                    content: " ";
+                    position: absolute;
+                    height: 1rem;
+                    width: 100%;
+                    background-color: $color-orange-deep;
+                    top: -1rem;
+                    left: 0;
+                    transform: skewX(45deg);
+                    transform-origin: bottom;
+                    box-shadow: -0.1rem -0.1rem 0.1rem #000;
+                }
+
+
+                img{
+                    width: 100%;
+                }
+
+                .card-name{
+                    font-size: 2rem;
+                    font-weight: 800;
+                    margin: 2rem 0;
+                    text-transform: uppercase;
+                    text-shadow: 0.1rem 0.1rem 0.1rem #000;
+                }
+
+                .card-btn{
+                    width: 70%;
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    border-radius: 5px;
+                    color: $color-grey-light;
+                    cursor: pointer;
+                    background-color: $color-grey-dark-deep;
+                }
+            }
+        }
+    }
+
 }
