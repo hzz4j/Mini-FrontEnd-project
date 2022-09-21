@@ -1,6 +1,7 @@
 import './style.scss'
 
 const icons = document.querySelectorAll(".section-1-icons i")!
+const menu = document.querySelector(".menu")! as HTMLElement
 
 let i = 1;
 setInterval(()=>{
@@ -17,3 +18,11 @@ setInterval(()=>{
     }
     
 },4000)
+
+
+menu.addEventListener('click',()=>{
+   const els = document.querySelectorAll(".target")!
+   els.forEach(el => {
+    el.classList.toggle("change")
+   })
+})
