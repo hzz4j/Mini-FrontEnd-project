@@ -9,3 +9,23 @@
 html{
     font-size: 62.5%;
 }
+
+
+.section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15rem 0 10rem 0;
+}
+
+.section-heading{
+    font-size: 5rem;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: .5rem;
+    text-shadow: .2rem .2rem .5rem #555;
+    border-bottom: .5rem solid #555;
+    margin-bottom: 15rem;
+}

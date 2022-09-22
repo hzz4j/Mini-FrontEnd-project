@@ -117,21 +117,9 @@
     }
 
     .section-2{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 15rem 0 10rem 0;
-
+        @extend .section;
         .section-2-heading{
-            font-size: 5rem;
-            font-weight: 600;
-            color: #333;
-            letter-spacing: .5rem;
-            text-shadow: .2rem .2rem .5rem #555;
-            border-bottom: .5rem solid #555;
-            margin-bottom: 15rem;
+           @extend .section-heading;
         }
 
         .progress-bars-wrapper{
@@ -197,5 +185,89 @@
         }
     }
 
+
+    .section-3{
+        @extend .section;
+        background-color: aliceblue;
+        .section-3-heading{
+            @extend .section-heading;
+        }
+
+        .projects-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            .project{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 50rem;
+                margin: 3rem;
+                position: relative;
+                overflow: hidden;
+                box-shadow: .2rem .2rem .5rem #777;
+                transition: box-shadow $unit-time;
+
+                &:hover{
+                    box-shadow: 1rem 1rem 1rem #777;
+                    .project-text{
+                        top: 7rem;
+                        transition: top $unit-time $unit-time;
+                    }
+
+                    .project-link{
+                        bottom: 5rem;
+                        transition: bottom $unit-time $unit-time;
+                    }
+
+                    .project-img{
+                        opacity: 0.2;
+                        transition: opacity $unit-time;
+                    }
+                }
+                .project-text{
+                    position: absolute;
+                    top: -7rem;
+                    text-align: center;
+                    letter-spacing: .2rem;
+                    transition: top $unit-time;
+                    .project-title{
+                        font-size: $card-title-1;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        margin-bottom: 1rem;
+                        
+                    }
+
+                    .project-description{
+                        font-size: $card-title-2;
+                        font-weight: 500;
+                        color: $theme-primary-color;
+                    }
+                }
+
+                .project-img{
+                    width: 100%;
+                }
+
+                .project-link{
+                    position: absolute;
+                    bottom: -5rem;
+                    text-decoration: none;
+                    letter-spacing: .2rem;
+                    font-size: $card-title-2;
+                    padding: .2rem 1rem;
+                    border: .3rem solid $theme-primary-color;
+                    background-color: #fff;
+                    transition: bottom $unit-time;
+                }
+
+
+            }
+        }
+    }
 
 }
