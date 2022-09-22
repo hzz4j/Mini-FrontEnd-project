@@ -3,17 +3,27 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
+    outline: none;
 }
 
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+
+    @media(max-width: 1400px){
+        font-size: 50%;
+    }
+
+    @media(max-width: 450px){
+        font-size: 30%;
+    }
 }
 
 
 .section{
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

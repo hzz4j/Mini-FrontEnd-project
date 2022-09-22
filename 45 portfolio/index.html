@@ -14,21 +14,21 @@
         <h1 class="heading">Full Stack Developer</h1>
         <img src="/images/q10viking.jpg" alt="静默" class="person-img">
         <h3 class="person-name">静默</h3>
-        <button class="section-1-btn">PROJECTS</button>
+        <a href="#section-3" class="section-1-btn">PROJECTS</a>
       </section>
       <!-- section-1-end -->
 
       <!-- navbar start -->
       <nav class="navbar">
         <a href="#section-1" class="navbar-link active">home</a>
-        <a href="#" class="navbar-link">about</a>
+        <a href="#section-2" class="navbar-link">about</a>
         <a href="#section-3" class="navbar-link">portfolio</a>
-        <a href="#" class="navbar-link">contact</a>
+        <a href="#section-4" class="navbar-link">contact</a>
       </nav>
       <!-- navbar-end -->
 
       <!-- section-2 start -->
-      <section class="section-2">
+      <section class="section-2" id="section-2">
         <h2 class="section-2-heading">About Me</h2>
 
         <div class="progress-bars-wrapper">
@@ -148,7 +148,38 @@
           </div>
         </section>
       <!-- section-3 end -->
+
+      <!-- section-4 contact start -->
+      <section class="section-4-contact" id="section-4">
+        <h2 class="section-4-heading">contact me</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="name">
+          <input type="text" placeholder="email">
+          <textarea class="message" placeholder="message"></textarea>
+          <button type="submit" class="btn">submit</button>
+        </form>
+      </section>
+      <!-- section-4 contact end -->
       
+      <footer>
+        <div class="social-medias">
+          <a href="#none" class="social-media-link">
+            <i class="fab fa-github-square"></i>
+          </a>
+          <a href="#none" class="social-media-link">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="#none" class="social-media-link">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="#none" class="social-media-link">
+            <i class="fab fa-instagram-square"></i>
+          </a>
+        </div>
+        <p class="copyright">
+          Copyright &copy; <span class="author">静默</span>. All Rights Reserved
+        </p>
+      </footer>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
