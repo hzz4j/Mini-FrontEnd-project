@@ -11,6 +11,10 @@
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+
+    @media(max-width: 1000px){
+        font-size: 50%;
+    }
 }
 
 body{
