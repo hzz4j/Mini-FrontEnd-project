@@ -128,6 +128,12 @@
                 }
             }
         }
+
+        &.sticky{
+            position: fixed;
+            top: 0;
+            z-index: 200;
+        }
     }
 
     .section-2{
@@ -142,7 +148,7 @@
                 width: 60rem;
                 height: 3rem;
                 background-color: #ccc;
-                margin: 1.5rem 0;
+                margin-bottom: 1.5rem;
                 border-radius: 0.3rem;
                 box-shadow: 0.2rem 0.2rem 1rem #555;
                 position: relative;
@@ -163,10 +169,11 @@
                 }
 
                 .progress-percent{
-                    width: 80%;
+                    width: 0;
                     height: 100%;
                     border-radius: 0.3rem 0;
                     background-color: $theme-primary-color;
+                    transition: width 1s $unit-time;
                 }
             }
         }
