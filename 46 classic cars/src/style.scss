@@ -4,14 +4,44 @@
 .menu{
   width: 4rem;
   height: 4rem;
-  background-color: red;
   position: fixed;
   top: 2rem;
   left: 2rem;
   z-index: 10;
-  transition: left $unit-time;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all $unit-time;
   &.change{
     left: 15vw;
+    transform: rotate(45deg);
+    .menu-line{
+      margin: 0;
+    }
+    .menu-line-1{
+      transform: rotate(270deg) translateX(-0.2rem);
+    }
+
+    .menu-line-2{
+      transform: rotate(360deg) translateY(-0.2rem);
+    }
+  }
+
+  .menu-line{
+    width: 100%;
+    height: .3rem;
+    margin: .5rem 0;
+    background-color: #000;
+    transition: transform $unit-time;
+  }
+
+  .menu-line-1{
+    @extend .menu-line;
+  }
+
+  .menu-line-2{
+    @extend .menu-line;
   }
 }
 
@@ -52,12 +82,14 @@
     width: 100vw;
     max-width: 100%;
     perspective: 50rem;
-
+    margin-bottom: 3rem;
+    
     section{
       width: 100%;
       height: 100vh;
       background-color: #fff;
       margin-bottom: 1rem;
+      box-shadow: .5rem .5rem 1rem #aaa;
       position: relative;
       left: 0;
       transform-origin: left;
