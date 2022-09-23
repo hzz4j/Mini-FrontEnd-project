@@ -8,8 +8,6 @@ const sections = document.querySelectorAll("section")!
 const progressBarPercents = [97, 89, 85, 60];
 const navbarOffsetTop = navbar.offsetTop
 
-
-
 window.addEventListener("scroll",()=>{
    // fixded navbar
    fixNavBar()
@@ -61,7 +59,7 @@ function handleProgressPercentWidth(){
 }
 
 function getHeight(el:HTMLElement){
-    let strVal = getComputedStyle(navbar).getPropertyValue("height")
+    let strVal = getComputedStyle(el).getPropertyValue("height")
     return +strVal.substring(0,strVal.length-2)
 }
 
