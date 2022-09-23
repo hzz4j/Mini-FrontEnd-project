@@ -46,7 +46,8 @@ Learn and Use HTML ,CSS,Javascript or Typescript And Vue3 knowledge to build min
 | 36   | [Dropdown menu](https://q10viking.github.io/Mini-FrontEnd-project/42%20dropdown%20menu/dist/#/) |
 | 37   | [Form Validate](https://q10viking.github.io/Mini-FrontEnd-project/43%20form%20validator/dist/) |
 | 38   | [Foods](https://q10viking.github.io/Mini-FrontEnd-project/44%20foods/dist/) |
-| 39   | [Portfolio](https://q10viking.github.io/Mini-FrontEnd-project/45%20portfolio/dist/)                                                |
+| 39   | [Portfolio](https://q10viking.github.io/Mini-FrontEnd-project/45%20portfolio/dist/) |
+| 40   | [classic cars](https://q10viking.github.io/Mini-FrontEnd-project/46%20classic%20cars/dist/)                                             |
 
 
 
