@@ -1,0 +1,19 @@
+{
+
+    "description": "Adds a solid red border to all webpages matching mozilla.org. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#borderify",
+    "manifest_version": 2,
+    "name": "Q10Vikiing(静默)Simple",
+    "version": "1.0",
+    "homepage_url": "https://q10viking.github.io",
+    "icons": {
+      "48": "images/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["app.js"]
+      }
+    ]
+  
+  }
