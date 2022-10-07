@@ -48,7 +48,8 @@ Learn and Use HTML ,CSS,Javascript or Typescript And Vue3 knowledge to build min
 | 38   | [Foods](https://q10viking.github.io/Mini-FrontEnd-project/44%20foods/dist/) |
 | 39   | [Portfolio](https://q10viking.github.io/Mini-FrontEnd-project/45%20portfolio/dist/) |
 | 40   | [classic cars](https://q10viking.github.io/Mini-FrontEnd-project/46%20classic%20cars/dist/) |
-| 41   | [Loading](https://q10viking.github.io/Mini-FrontEnd-project/48%20loading/)                                                  |
+| 41   | [Loading](https://q10viking.github.io/Mini-FrontEnd-project/48%20loading/) |
+| 42   | [Color Switch](https://q10viking.github.io/Mini-FrontEnd-project/49%20color%20switch/dist/)                                             |
 
 
 
