@@ -3,6 +3,7 @@ import "./style.scss";
 const colors = document.querySelectorAll(".color")!;
 const btn = document.getElementById("btn")! as HTMLInputElement;
 const txt = document.querySelector(".txt")! as HTMLInputElement;
+
 colors.forEach((color) => color.addEventListener("click", changeColor));
 
 function changeColor(event: Event) {
