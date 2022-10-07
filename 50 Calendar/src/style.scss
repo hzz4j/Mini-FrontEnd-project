@@ -1,0 +1,121 @@
+
+$primary-color: #9b59b6;
+$second-color: #f2f2f2;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: $primary-color;
+}
+
+.calendar-wrapper{
+  
+  width: 45rem;
+  color: #000;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.2);
+
+  header{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 3rem 1rem;
+
+    .icons{
+      user-select: none;
+      i{
+        width: 3.8rem;
+        height: 3.8rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 3.8rem;
+        margin-left: 1rem;
+        cursor: pointer;
+        background-color: $second-color;
+      }
+    }
+  }
+
+  .calendar{
+    padding: 2rem;
+    font-size: 1.6rem;
+
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      text-align: center;
+      color: #333;
+      li{
+        // 占据七分之一
+        width: calc(100%/7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .weeks{
+      li{
+        font-weight: 500;
+      }
+    }
+  }
+
+  
+
+  .days{
+    li{
+      position: relative;
+      z-index: 2;
+      margin-top: 3rem;
+      cursor: pointer;
+
+      &.inactive{
+        color: #aaa;
+      }
+
+      &.active{
+        color: #fff;
+      }
+
+
+      &::before{
+        content: "";
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+        border-radius: 50%;
+        
+      }
+
+      
+
+      &.active::before{
+        background-color: $primary-color;
+      }
+
+      &:not(.active):hover::before{
+        background-color: $second-color;
+      }
+    }
+  }
+}
