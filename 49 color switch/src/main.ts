@@ -10,7 +10,8 @@ function changeColor(event: Event) {
   const target = event.target as HTMLElement;
   // get color
   if (target) {
-    const color = getComputedStyle(target).getPropertyValue("background-color");
+    // 使用getComputedStyle来获取css变量
+    const color = getComputedStyle(target).getPropertyValue("--clr");
     document.body.style.backgroundColor = color;
     txt.style.borderLeftColor = color;
     btn.style.backgroundColor = color;
