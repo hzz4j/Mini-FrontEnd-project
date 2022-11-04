@@ -1,0 +1,39 @@
+$theme-color: #111;
+$square-color: #2f2e2e;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $theme-color;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 40rem;
+  .square{
+    margin: .2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: $square-color;
+    box-shadow: 0 0 .2rem #000;
+    transition: 3s ease;  // 过渡效果
+
+    &:hover{
+      transition-duration: 0s; // 一开始不进行过渡，马上显示
+    }
+  }
+}
