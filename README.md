@@ -53,8 +53,8 @@ Learn and Use HTML ,CSS,Javascript or Typescript And Vue3 knowledge to build min
 | 43   | [Calendar](https://q10viking.github.io/Mini-FrontEnd-project/50%20Calendar/dist/) |
 | 44   | [Testimanial](https://q10viking.github.io/Mini-FrontEnd-project/51%20Testimonial-box-switcher/dist/) |
 | 45   | [Kinetic loader](https://q10viking.github.io/Mini-FrontEnd-project/52%20kinetic-loader/dist/) |
-| 46   | [Mobile Tab Navigation](https://q10viking.github.io/Mini-FrontEnd-project/53%20Mobile%20Tab%20Navigation/dist/)                                    |
-|      |                                                              |
+| 46   | [Mobile Tab Navigation](https://q10viking.github.io/Mini-FrontEnd-project/53%20Mobile%20Tab%20Navigation/dist/) |
+| 47   | [HoverBoard](https://q10viking.github.io/Mini-FrontEnd-project/54%20hoverboard/dist/)                                               |
 |      |                                                              |
 |      |                                                              |
 
