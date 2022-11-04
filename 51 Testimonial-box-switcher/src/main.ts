@@ -2,14 +2,14 @@ import "./style.scss";
 import data from "./data";
 
 const username = document.querySelector(".username")!;
-const userimage = document.querySelector(".user-image")! as HTMLImageElement;
+const userimage = document.querySelector(".user-image")!;
 const role = document.querySelector(".role")!;
 const testimonial = document.querySelector(".testimonial")!;
 
 let idx = 1;
 const updateTestimonial = () => {
   const { name, position, photo, text } = data[idx];
-  userimage.src = photo;
+  if (userimage instanceof HTMLImageElement) userimage.src = photo;
   username.innerHTML = name;
   role.innerHTML = position;
   testimonial.innerHTML = text;
