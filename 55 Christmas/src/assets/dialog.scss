@@ -1,0 +1,90 @@
+.dialog{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  // background-color: #2d8434;
+  width: 375px;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  animation: dance 2s linear infinite;
+
+  .left{
+    // background-color: red;
+    .line{
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      position:relative;
+
+      &::before{
+        position: absolute;
+        content: "";
+        border: 10px solid transparent;
+        border-left: 10px solid rgb(72, 212, 65);
+        z-index: 1000;
+        top:50%;
+        right: -13%;
+        transform: translate(0%,-85%);
+      }
+
+      .text{      
+        background-color: rgb(72, 212, 65);
+        padding: 10px 12px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+        text-align: right;
+        position: relative;
+      }
+      
+      
+
+    }
+  }
+
+  .right{
+    // background-color: aliceblue;
+    .line{
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-start;
+      position:relative;
+
+
+      &::before{
+        position: absolute;
+        content: "";
+        border: 10px solid transparent;
+        border-right: 10px solid rgb(255, 255, 255);
+        z-index: 1000;
+        top:50%;
+        left: -13%;
+        transform: translate(0%,-85%);
+      }
+
+      .text{      
+        background-color: rgb(255, 255, 255);
+        padding: 10px 12px;
+        margin-bottom: 16px;
+        border-radius: 6px;
+        text-align: right;
+        position: relative;
+      }
+    }
+  }
+}
+
+
+@keyframes dance {
+    0% {
+      opacity: 1;
+    }
+    50%{
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
