@@ -764,4 +764,15 @@ $light-off-opacity: 0.4;
     -webkit-text-stroke: 3px rgb(249, 248, 248,0.6); /*文字边框处理*/
     -webkit-text-fill-color: transparent;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    white-space:nowrap;
+
+    .text{
+      text-transform: uppercase;
+      -webkit-text-stroke: 2px rgb(249, 248, 248,0.6); /*文字边框处理*/
+      -webkit-text-fill-color: transparent;
+    }
+  }
 }
