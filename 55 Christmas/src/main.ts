@@ -80,5 +80,5 @@ window.onload = () => {
   setTimeout(() => {
     let snowflake = new Snowflake(0, 0, 0, 0, 0);
     snowflake.init(document.getElementById("snow")! as HTMLDivElement);
-  }, 500);
+  }, 100);
 };

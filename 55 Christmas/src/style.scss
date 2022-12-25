@@ -745,3 +745,23 @@ $light-off-opacity: 0.4;
     50% { background: rgba(247,0,148,$light-off-opacity);
     box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,0.2);}
 }
+
+// --------------------title------------------------------
+.title{
+  padding-top: 30px;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%,0);
+  margin: auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  
+  .text{
+    text-transform: uppercase;
+    -webkit-text-stroke: 3px rgb(249, 248, 248,0.6); /*文字边框处理*/
+    -webkit-text-fill-color: transparent;
+  }
+}
