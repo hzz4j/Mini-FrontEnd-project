@@ -1,8 +1,8 @@
 import "./style.scss";
 
 class Snowflake {
-  public flakes: Snowflake[] = [];
-  public flakesTotal = 250;
+  public static flakes: Snowflake[] = [];
+  public static flakesTotal = 250;
   public size: number;
   public x: number;
   public y: number;
@@ -49,7 +49,7 @@ class Snowflake {
       "translate3d(" + this.x + "px" + "," + this.y + "px,0)";
   }
 
-  public init(container: HTMLDivElement) {
+  public static init(container: HTMLDivElement) {
     for (let i = this.flakesTotal; i--; i > 0) {
       let size = (Math.random() + 0.2) * 12 + 1;
       let flake = new Snowflake(
@@ -66,7 +66,7 @@ class Snowflake {
     console.log("Over");
   }
 
-  public update() {
+  public static update() {
     for (let i = 250; i--; ) {
       let flake = this.flakes[i];
       flake.move();
@@ -78,7 +78,7 @@ class Snowflake {
 
 window.onload = () => {
   setTimeout(() => {
-    let snowflake = new Snowflake(0, 0, 0, 0, 0);
-    snowflake.init(document.getElementById("snow")! as HTMLDivElement);
+    // let snowflake = new Snowflake(0, 0, 0, 0, 0);
+    Snowflake.init(document.getElementById("snow")! as HTMLDivElement);
   }, 100);
 };

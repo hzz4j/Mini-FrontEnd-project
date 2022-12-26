@@ -2,6 +2,12 @@
 @import "./assets/dialog.scss";
 @import "./assets/top.scss";
 
+@font-face {
+  font-family: 'iconfont';  /* Project id 3838764 */
+  src: url('//at.alicdn.com/t/c/font_3838764_cawcbtbtgpl.woff2?t=1671960608479') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3838764_cawcbtbtgpl.woff?t=1671960608479') format('woff'),
+       url('//at.alicdn.com/t/c/font_3838764_cawcbtbtgpl.ttf?t=1671960608479') format('truetype');
+}
 
 *{
   margin: 0;
@@ -39,12 +45,12 @@ body {
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 20px;
+    font-size: 30px;
     white-space:nowrap;
 
     .text{
       text-transform: uppercase;
-      -webkit-text-stroke: 2px rgb(249, 248, 248,0.6); /*文字边框处理*/
+      -webkit-text-stroke: 3px rgb(255, 255, 255,0.8); /*文字边框处理*/
       -webkit-text-fill-color: transparent;
     }
   }
