@@ -55,8 +55,7 @@ Learn and Use HTML ,CSS,Javascript or Typescript And Vue3 knowledge to build min
 | 45   | [Kinetic loader](https://q10viking.github.io/Mini-FrontEnd-project/52%20kinetic-loader/dist/) |
 | 46   | [Mobile Tab Navigation](https://q10viking.github.io/Mini-FrontEnd-project/53%20Mobile%20Tab%20Navigation/dist/) |
 | 47   | [HoverBoard](https://q10viking.github.io/Mini-FrontEnd-project/54%20hoverboard/dist/) |
-| 48   |                                                              [Christmas](https://q10viking.github.io/Mini-FrontEnd-project/55%20Christmas/dist/)|
-|      |                                                              |
+| 48   | [Christmas](https://q10viking.github.io/Mini-FrontEnd-project/55%20Christmas/dist/) |
 
 
 

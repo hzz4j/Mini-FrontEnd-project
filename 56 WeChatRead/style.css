@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Zhi Mang Xing";
+  src: url("./ZhiMangXing-Regular.ttf");
+}
+
+:root {
+  --primary-color: #222327;
+  --second-color: #318a62;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--second-color);
+  font-family: "Zhi Mang Xing", cursive;
+  background-image: url("./sun-night.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.word {
+  position: relative;
+  z-index: 2;
+  width: 400px;
+}
+
+.line {
+  /* writing-mode: vertical-lr; */
+  margin: 3px;
+  /* padding: 3px; */
+  color: #fff;
+  /* background-color: #fff; */
+  /* width: 30px; */
+  height: 50px;
+  line-height: 50px;
+  font-size: 32px;
+  /* font-weight: 100; */
+  text-align: center;
+}
+
+/* modal */
+.modal {
+  /* background-color: rgba(0,0,0,0.3); */
+  background-color: rgba(6, 0, 5, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
